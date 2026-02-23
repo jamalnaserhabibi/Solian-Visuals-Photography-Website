@@ -3812,6 +3812,10 @@ font-weight: 100;
   color: #9395a5;
 }
 @media screen and (max-width: 768px) {
+  .header-caption .caption-title .brannedName {
+  text-wrap: wrap;
+
+}
   .site-branding {
     text-align: center;
   }

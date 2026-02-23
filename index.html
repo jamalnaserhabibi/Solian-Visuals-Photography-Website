@@ -1,6 +1,77 @@
 <!doctype html>
 <html lang="en">
   <head>
+
+
+<style>
+  
+/* Luxury animations */
+@keyframes luxuryGlow {
+  0% { text-shadow: 0 0 30px rgba(255,168,0,0.3); }
+  50% { text-shadow: 0 0 50px rgba(255,168,0,0.6); }
+  100% { text-shadow: 0 0 30px rgba(255,168,0,0.3); }
+}
+
+.brannedName {
+  animation: luxuryGlow 3s infinite;
+  
+  letter-spacing: 4px;
+  background: linear-gradient(135deg, #fff 0%, #ffa800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.caption-title br + text {
+  font-weight: 700 !important;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.caption-title br + text::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #ffa800, transparent);
+}
+
+.header-caption p {
+  font-weight: 300 !important;
+  letter-spacing: 1px;
+  line-height: 1.8 !important;
+  opacity: 0.9;
+}
+
+/* Luxury button hover effects */
+.btn-warning, .btn-bordered {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-warning::before, .btn-bordered::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-warning:hover::before, .btn-bordered:hover::before {
+  width: 300px;
+  height: 300px;
+}
+</style>
+
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -21,6 +92,9 @@
     <link href="assets/css/owl.theme.css" rel="stylesheet" />
     <link href="assets/css/magnific-popup.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.min.css" />
+
+
+
   </head>
 
   <body id="home" class="home">
@@ -137,7 +211,7 @@
           <div class="col-sm-6">
             <div class="header-caption">
               <h2 class="caption-title">
-                <span class="brannedName">Solian Visuals Photography</span>
+                <span class="brannedName"  >Solian Visuals Photography</span>
                 <br />Real Estate Photography in Northwest Arkansas
               </h2>
               <p>
@@ -162,7 +236,7 @@
 
 <!-- begin:additional-info -->
     <div id="additional-info" class="additional-info block-section bg-grey padd-20-top padd-40-btm">
-      <div class="container"  >
+      <div class="container" data-aos="fade-up" >
         <div class="row">
           <div class="col-md-3 col-sm-6">
             <div class="contact-item">
@@ -209,12 +283,12 @@
     <!-- end:additional-info -->
 
   
- <hr>
+ 
 
     <!-- begin:work -->
     <div id="work" class="work content-section bg-grey">
-      <div class="container">
-        <div class="row">
+      <div class="container" >
+        <div class="row" data-aos="fade-up">
           <div class="col-md-12">
             <div class="section-title">
               <h2>Our Works</h2>
@@ -224,7 +298,7 @@
         </div>
         <!-- .row -->
 
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <div class="col-md-12">
             <ul class="work-filter">
               <li class="active" data-filter="*"><a href="#">All works</a></li>
@@ -372,7 +446,7 @@
     <!-- begin:cta -->
     <div id="cta" class="cta block-section padd-40-top padd-40-btm bg-dark">
       <div class="container">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <div class="col-sm-8">
             <h4 class="bodyText">
               Looking for Professionals to project your property?
@@ -398,7 +472,7 @@
 <div id="how-it-works" class="block-section bg-white padd-60-top padd-60-btm">
   <div class="container">
     
-    <div class="row">
+    <div class="row" data-aos="fade-up">
       <div class="col-md-12">
         <div class="section-title">
           <h2>How It Works</h2>
@@ -413,7 +487,7 @@
     <div class="row steps-row">
     
       <div class="col-md-3 col-sm-6 step-connector">
-        <div class="step-item">
+        <div class="step-item" data-aos="fade-up">
           <div class="step-icon">
             <i class="fa fa-calendar-check-o"></i>
           </div>
@@ -427,7 +501,7 @@
 
       <!-- step 2 -->
       <div class="col-md-3 col-sm-6 step-connector">
-        <div class="step-item">
+        <div class="step-item" data-aos="fade-up">
           <div class="step-icon">
             <i class="fa fa-camera-retro"></i>
           </div>
@@ -441,7 +515,7 @@
 
     
       <div class="col-md-3 col-sm-6 step-connector">
-        <div class="step-item">
+        <div class="step-item" data-aos="fade-up">
           <div class="step-icon">
             <i class="fa fa-cloud-upload"></i>
           </div>
@@ -455,7 +529,7 @@
 
    
       <div class="col-md-3 col-sm-6">
-        <div class="step-item">
+        <div class="step-item" data-aos="fade-up">
           <div class="step-icon">
             <i class="fa fa-download"></i>
           </div>
@@ -469,7 +543,7 @@
     </div>  
 
     
-    <div class="row marg-40-top">
+    <div class="row marg-40-top" data-aos="fade-up">
       <div class="col-md-12 text-center">
         <p style="font-size: 15px; color: #6b6e80;">
           <i class="fa fa-shield" style="color: #ffa800;"></i> 
@@ -484,7 +558,7 @@
 
 
     <!-- begin:about -->
-    <div id="about" class="block-section image-block bg-white">
+    <div id="about" class="block-section image-block bg-white" data-aos="fade-up">
       <div class="container-fluid container-no-padding">
         <div class="row row-no-margin">
           <div class="image-block-item col-md-6 col-sm-5 col-xs-12">
@@ -533,7 +607,7 @@
 
 
   <!-- begin:testimonial -->
-    <div id="testimonial" class="block-section image-block bg-light">
+    <div id="testimonial" class="block-section image-block bg-light" data-aos="fade-up">
       <div class="container-fluid container-no-padding">
         <div class="row row-no-margin">
           <div
@@ -618,7 +692,7 @@
 
 
     <!-- begin:footer -->
-    <footer id="colophon" class="site-footer bg-black" role="contentinfo">
+    <footer id="colophon" class="site-footer bg-black" role="contentinfo" data-aos="fade-up">
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-sm-6">
@@ -684,7 +758,7 @@
 
     <!-- begin:copyright -->
     <section id="copyright" class="copyright bg-black">
-      <div class="container">
+      <div class="container"   data-aos="fade-up">
         <div class="row">
           <div class="col-sm-6 copy-left">
             <p>
@@ -727,17 +801,161 @@
     <!-- #copyright -->
     <!-- begin:copyright -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="assets/plugins/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/plugins/parallax.min.js"></script>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/plugins/jquery.easing.js"></script>
-    <script src="assets/plugins/jquery.magnific-popup.min.js"></script>
-    <script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/plugins/isotope.pkgd.min.js"></script>
-    <script src="assets/plugins/owl.carousel.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
-  </body>
+  <!-- At the end of your body, replace ALL scripts after this comment with this: -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/plugins/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/plugins/parallax.min.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/plugins/jquery.easing.js"></script>
+<script src="assets/plugins/jquery.magnific-popup.min.js"></script>
+<script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
+<script src="assets/plugins/isotope.pkgd.min.js"></script>
+<script src="assets/plugins/owl.carousel.min.js"></script>
+<script src="assets/js/script.min.js"></script>
+
+ 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
+
+ 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+ 
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 200
+  });
+
+   
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    if (typeof gsap === 'undefined') return;
+    
+    // Target ALL elements including site-header
+    const siteHeader = document.querySelector('.site-header');
+    const brandName = document.querySelector('.brannedName');
+    const captionTitle = document.querySelector('.caption-title');
+    const paragraph = document.querySelector('.header-caption p');
+    const buttons = document.querySelectorAll('.header-action-button .btn');
+    
+    if (!brandName) return;
+    
+    // Get the second line text (the part after <br>)
+    const br = captionTitle.querySelector('br');
+    let secondLineText = '';
+    
+    if (br && br.nextSibling) {
+      secondLineText = br.nextSibling.textContent;
+      // REMOVE the original second line text node
+      if (br.nextSibling.nodeType === 3) {
+        br.nextSibling.remove();
+      }
+    }
+    
+    // Set initial states for ALL elements
+    gsap.set(siteHeader, { opacity: 0, y: -30, filter: 'blur(3px)' });
+    gsap.set(brandName, { opacity: 0, y: 40, filter: 'blur(5px)' });
+    
+    // Create and add the second line element
+    if (secondLineText) {
+      const secondLineElement = document.createElement('span');
+      secondLineElement.className = 'second-line-luxury';
+      secondLineElement.textContent = secondLineText;
+      secondLineElement.style.display = 'inline-block';
+      secondLineElement.style.opacity = '0';
+      secondLineElement.style.transform = 'translateY(30px)';
+      secondLineElement.style.filter = 'blur(5px)';
+      
+      if (br) {
+        br.insertAdjacentElement('afterend', secondLineElement);
+      }
+    }
+    
+    gsap.set(paragraph, { opacity: 0, y: 30, filter: 'blur(3px)' });
+    gsap.set(buttons, { opacity: 0, y: 20 });
+    
+    // Create timeline
+    const tl = gsap.timeline();
+    
+    // 1. Animate site-header first
+    tl.to(siteHeader, {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      duration: 1,
+      ease: "power2.out"
+    }, 0);
+    
+    // 2. Animate brand name
+    tl.to(brandName, {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      duration: 1.5,
+      ease: "power3.out"
+    }, 0.3);
+    
+    // 3. Animate second line
+    if (document.querySelector('.second-line-luxury')) {
+      tl.to('.second-line-luxury', {
+        opacity: 1,
+        y: 0,
+        filter: 'blur(0px)',
+        duration: 1.2,
+        ease: "power3.out"
+      }, 0.8);
+    }
+    
+    // 4. Animate paragraph
+    tl.to(paragraph, {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      duration: 1,
+      ease: "power3.out"
+    }, 1.3);
+    
+    // 5. Animate buttons
+    tl.to(buttons, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "back.out(1.4)"
+    }, 1.8);
+    
+    // Add luxury glow
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes luxuryGlowSimple {
+        0% { text-shadow: 0 0 20px rgba(255,168,0,0.2); }
+        50% { text-shadow: 0 0 40px rgba(255,168,0,0.6); }
+        100% { text-shadow: 0 0 20px rgba(255,168,0,0.2); }
+      }
+      .brannedName {
+        animation: luxuryGlowSimple 3s infinite !important;
+      }
+    `;
+    document.head.appendChild(style);
+    
+  });
+</script>
+
+<style>
+ 
+  
+  /* Only hero elements get animated */
+  .brannedName,
+  .second-line-luxury,
+  .header-caption p,
+  .header-action-button .btn {
+    will-change: transform, opacity, filter;
+  }
+</style>
+</body>
 </html>
