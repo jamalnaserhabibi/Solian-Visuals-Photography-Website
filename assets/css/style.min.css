@@ -1,13 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Cinzel Decorative", serif,"Open Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #2b2b2b;
   background: #fff;
   scrollbar-face-color: #2b2b2b;
   -webkit-font-smoothing: antialiased;
+}
+.bgImage{
+  background: linear-gradient(to right,#0f172ab8,rgba(255, 255, 255, 0));
+}
+.bgImage .header{
+ 
 }
 ::-moz-selection {
   color: #fff;
@@ -433,7 +439,7 @@ hr {
 .section-title h2,
 .section-title h3 {
   margin-bottom: 60px;
-  font-family: Poppins, sans-serif;
+  /* font-family: Poppins, sans-serif; */
   text-transform: uppercase;
   font-size: 18px;
   line-height: 26px;
@@ -456,7 +462,7 @@ hr {
   margin-bottom: 40px;
 }
 .main-title-primary {
-  font-family: Poppins, sans-serif;
+  /* font-family: Poppins, sans-serif; */
   font-size: 38px;
   line-height: 44px;
   font-weight: 500;
@@ -470,7 +476,7 @@ hr {
   letter-spacing: 1px;
 }
 .main-title-secondary {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -1021,7 +1027,7 @@ hr {
 }
 .fact-item {
   display: block;
-  font-family: Poppins, sans-serif;
+  /* font-family: Poppins, sans-serif; */
   text-align: center;
 }
 .fact-item .fact-item-number {
@@ -1241,7 +1247,7 @@ hr {
 }
 .service-item-title {
   margin-bottom: 5px;
-  font-family: Poppins, sans-serif;
+  /* font-family: Poppins, sans-serif; */
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 300;
@@ -1252,6 +1258,7 @@ hr {
   margin: 0 auto 40px;
   list-style-type: none;
   padding: 0;
+  
 }
 .work-filter li {
   display: inline-block;
@@ -1301,6 +1308,8 @@ hr {
   -ms-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   -o-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    font-family: Poppins, sans-serif;
+
 }
 .work-grid .work-item .work-item-image {
   display: block;
@@ -1346,6 +1355,14 @@ hr {
   letter-spacing: 1px;
 }
 @media screen and (max-width: 768px) {
+.header-caption .header-action-button {
+  display: block;
+  margin: 130px 0 !important;
+}
+  .header-caption {
+ padding: 110px 0 !important;
+ text-align: center;
+}
   .work-grid .work-item {
     width: 50%;
   }
@@ -1920,7 +1937,7 @@ hr {
   bottom: -5px;
   padding-bottom: 20px;
   padding-top: 10px;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
   font-size: 46px;
   line-height: 48px;
   font-weight: 700;
@@ -2060,7 +2077,7 @@ hr {
   border-radius: 40px;
 }
 .process-item-title {
-  font-family: Poppins, sans-serif;
+  /* font-family: Poppins, sans-serif; */
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -2141,6 +2158,10 @@ hr {
 .gallery-slider #slider-thumbnail .item .caption-title {
   display: block;
   margin-top: 15px;
+}
+
+.cta .block-section .row p,.bodyText, .button{
+    font-family: Poppins, sans-serif !important;
 }
 .gallery-slider #slider-thumbnail .item .caption-title-link {
   display: block;
@@ -2914,7 +2935,7 @@ hr {
   margin: 5px 0;
   padding: 8px 14px;
   text-transform: uppercase;
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
   font-size: 9px;
   line-height: 12px;
   letter-spacing: 1px;
@@ -3058,7 +3079,7 @@ hr {
   color: #6b6e80;
 }
 .site-header.header-light .site-branding .site-title.title-image img {
-  max-height: 15px;
+  max-height: 35px;
   width: auto;
   max-width: 100%;
   margin-bottom: 5px;
@@ -3066,8 +3087,105 @@ hr {
 .site-header.header-light .menu-toggle {
   color: #2b2b2b;
 }
+
+.who_we_are{
+        font-family: 'Poppins', sans-serif;
+font-weight: 100;
+  font-size: 20px !important;
+}
+
+ .steps-row {
+       font-family: 'Poppins', sans-serif;
+
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      justify-content: center;
+    }
+    .step-item {
+      text-align: center;
+      padding: 20px 15px;
+      background: #fff;
+      border-radius: 8px;
+      transition: box-shadow 0.2s;
+      height: 100%;
+      border: 1px solid #f0f0f0;
+    }
+    .step-item:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .step-icon {
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      margin: 0 auto 20px;
+      background: #f5f5f5;
+      border-radius: 50%;
+      color: #ffa800;
+      font-size: 32px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .step-item:hover .step-icon {
+      background: #ffa800;
+      color: #fff;
+    }
+    .step-number {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      color: #2b2b2b;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    .step-number span {
+      background: #ffa80020;
+      padding: 2px 10px;
+      border-radius: 30px;
+      color: #cc8600;
+      font-weight: 600;
+      font-size: 14px;
+      margin-right: 6px;
+    }
+    .step-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+    .step-desc {
+      font-size: 14px;
+      color: #5f6272;
+      line-height: 1.6;
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    /* subtle connector line on desktop */
+    @media (min-width: 992px) {
+      .step-connector {
+        position: relative;
+      }
+      .step-connector:not(:last-child)::after {
+        content: "";
+        font-family: 'Pe-icon-7-stroke';
+        position: absolute;
+        right: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        color: #ddd;
+        font-weight: normal;
+      }
+    }
+    .section-title h2 {
+      margin-bottom: 20px !important;  /* tighten a bit */
+    }
+
+
+
 .site-header.header-dark {
-  background-color: #121212;
+  background-color:#0f172a;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -ms-transition: all 0.2s linear;
@@ -3130,12 +3248,13 @@ hr {
   color: #9395a5;
 }
 .site-header.header-dark .site-branding .site-title.title-image img {
-  max-height: 22px;
+  max-height: 50px;
   width: auto;
-  margin-bottom: 0;
+  margin-top: -10px;
+  /* margin-bottom: 0; */
 }
 .site-header.header-dark .menu-toggle {
-  margin-top: -45px;
+  margin-top: -73px;
   color: #fff;
 }
 @media screen and (max-width: 37.5em) {
@@ -3198,7 +3317,9 @@ hr {
   display: block;
   clear: both;
   width: 100%;
-  font-family: Poppins, sans-serif;
+   font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+   
   font-size: 13px;
 }
 @media screen and (min-width: 37.5em) {
@@ -3352,7 +3473,7 @@ hr {
   display: block;
   padding: 14px 18px 16px;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
@@ -3372,8 +3493,8 @@ hr {
 @media screen and (max-width: 37.5em) {
   .main-navigation .menu-toggle {
     float: right;
-    margin-top: -44px;
-    font-size: 18px;
+    margin-top: -70px;
+    font-size: 20px;
     line-height: 18px;
     padding: 12px 15px 10px;
     border: none;
@@ -3650,7 +3771,8 @@ hr {
   margin-bottom: 0;
 }
 .header-caption .caption-title .brannedName {
-    font-weight: 400;
+  text-wrap: nowrap;
+    font-weight: 700;
 }
 .site-branding .site-title {
   position: relative;
@@ -3677,8 +3799,10 @@ hr {
   margin-top: 0;
 }
 .site-branding .site-title.title-image img {
-  max-height: 20px;
+  max-height: 50px;
   width: auto;
+  margin-top: -7px;
+
   margin-bottom: 5px;
 }
 .site-branding .site-description {
@@ -3692,10 +3816,14 @@ hr {
     text-align: center;
   }
 }
+
+
 @media screen and (max-width: 37.5em) {
   .site-branding {
     text-align: left;
+    padding-top: 14px;
   }
+  
   .site-branding .site-title {
     display: inline-block;
     padding-top: 10px;
@@ -3704,7 +3832,8 @@ hr {
     line-height: 28px;
   }
   .site-branding .site-title.title-image img {
-    max-height: 15px;
+    max-height: 45px;
+    
     margin-bottom: 5px;
   }
 }
@@ -3739,7 +3868,7 @@ hr {
 .header {
   width: 100%;
   min-height: 600px;
-  height: auto;
+  height: 100vh;
   padding: 0 0 80px;
   background-color: transparent;
 }
@@ -3751,10 +3880,11 @@ hr {
 .header-caption {
   padding: 80px 0;
   color: #fff;
+ 
 }
 .header-caption,
 .header-caption p {
-  font-family: Poppins, sans-serif;
+  /* font-family: Poppins, sans-serif; */
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -3775,7 +3905,11 @@ hr {
 }
 .header-caption .header-action-button {
   display: block;
-  margin: 40px 0;
+  margin: 30px 0;
+}
+.additional-info{
+  font-family: Poppins, sans-serif;
+
 }
 .header-caption .header-action-button .btn {
   margin-right: 20px;
@@ -3832,7 +3966,7 @@ hr {
   border-color: #d58512;
 }
 .header-caption .header-action-button .btn-bordered {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.153);
   color: #fff;
 }
 .header-caption .header-action-button .btn-bordered:hover {
@@ -3897,15 +4031,15 @@ hr {
   margin-right: auto;
 }
 @media screen and (max-width: 768px) {
-  .header-content {
-    padding-top: 80px;
-  }
+ 
+ 
   .header-content img {
     display: block;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 480px) {
+ 
   .header-content {
     padding-top: 40px;
   }
@@ -4139,6 +4273,7 @@ hr {
   color: #9395a5;
 }
 @media screen and (max-width: 767px) {
+  
   .entry-content blockquote {
     padding: 20px 0;
   }
