@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .bgImage{
-  background: linear-gradient(to right,#0f172ab8,rgba(255, 255, 255, 0));
+  background: linear-gradient(to right,#0f172ac8,rgba(255, 255, 255, 0));
 }
  
  
@@ -22,7 +22,7 @@ body {
     z-index: 9999 !important;
   }
   .header {
-    background-image: url('../img/img-header.jpg'), linear-gradient(to right, #0f172ab8, rgba(255, 255, 255, 0)) !important;
+    background-image: url('../img/img-header.jpg'), linear-gradient(to right, #0f172ac8, rgba(255, 255, 255, 0)) !important;
     background-blend-mode: overlay !important;
     background-size: cover !important;
     background-position: right !important;
@@ -31,7 +31,7 @@ body {
   
   /* Ensure the gradient overlay works */
   .bgImage {
-    background: linear-gradient(to right, #0f172ab8, rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, #0f172ac8, rgba(255, 255, 255, 0));
   }
 }
 .bgImage .header{
