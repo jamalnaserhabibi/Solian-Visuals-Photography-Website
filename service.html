@@ -30,23 +30,36 @@
             </div>
           </div>
           <div class="col-sm-9">
-            <nav id="site-navigation" class="main-navigation">
-              <button class="menu-toggle"><span class="pe-7s-menu"></span></button>
-              <ul id="primary-menu" class="menu nav-menu">
-                <li class="menu-item"><a href="/">Home</a></li>
-                <li class="menu-item"><a href="about.html">About</a></li>
-                <li class="menu-item current-menu-item"><a href="service.html">Services</a></li>
-                <li class="menu-item menu-item-has-children"><a href="#">Pricing</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item"><a href="pricing">Basic</a></li>
-                    <li class="menu-item"><a href="pricing">Standard</a></li>
-                    <li class="menu-item"><a href="pricing">Premium</a></li>
-                  </ul>
-                </li>
-                <li class="menu-item"><a href="Portfolio">Portfolio</a></li>
-                <li class="menu-item"><a href="contact">Contact</a></li>
-              </ul>
-            </nav>
+          <nav
+                  id="site-navigation"
+                  class="main-navigation"
+                  role="navigation"
+                >
+                  <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-controls="primary-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="pe-7s-menu"></span
+                    ><span class="sr-only">Humberger</span>
+                  </button>
+                  <!-- current-menu-item must change in every page -->
+                  <div class="menu-testing-menu-container">
+                    <ul
+                      id="primary-menu"
+                      class="menu nav-menu"
+                      aria-expanded="false"
+                    >
+                      <li class="menu-item "><a href="/">Home</a></li>
+                      <li class="menu-item "><a href="about.html">About</a></li>
+                      <li class="menu-item current-menu-item"><a href="service.html">Services</a></li>
+                      <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                      <li class="menu-item"><a href="Portfolio">Portfolio</a></li>
+                      <li class="menu-item"><a href="contact">Contact</a></li>
+                    </ul>
+                  </div>
+                </nav>
           </div>
         </div>
       </div>
@@ -305,11 +318,17 @@
 
 <!-- Scripts -->
 <script src="assets/plugins/jquery.min.js"></script>
-<script src="assets/js/navigation.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/plugins/parallax.min.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/plugins/jquery.easing.js"></script>
+<script src="assets/plugins/jquery.magnific-popup.min.js"></script>
+<script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
+<script src="assets/plugins/isotope.pkgd.min.js"></script>
+<script src="assets/plugins/owl.carousel.min.js"></script>
+<script src="assets/js/script.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
   AOS.init({
     duration: 800,
