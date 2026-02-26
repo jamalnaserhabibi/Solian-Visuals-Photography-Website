@@ -15,7 +15,7 @@ pricing.html
 progress.html
 project.html
 service-item.html
-service.html
+
 single-fullwidth.html
 single.html
 social.html
@@ -97,3 +97,49 @@ typography.html
     </div>
     <!-- #client -->
     <!-- end:client -->
+
+
+  <!-- facts (AOS) -->
+  <div id="facts" class="facts content-section bg-theme">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+          <div class="fact-item">
+            <span class="fact-item-number">
+              <span class="pe-7s-alarm icon"></span>
+              <span class="number number-alt">10+</span>
+            </span>
+            <h5 class="fact-item-info">Year Experience</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="fact-item">
+            <span class="fact-item-number">
+              <span class="pe-7s-medal icon"></span>
+              <span class="number">16</span>
+            </span>
+            <h5 class="fact-item-info">Awards</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="fact-item">
+            <span class="fact-item-number">
+              <span class="pe-7s-tools icon"></span>
+              <span class="number">549</span>
+            </span>
+            <h5 class="fact-item-info">Projects Done</h5>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="fact-item">
+            <span class="fact-item-number">
+              <span class="pe-7s-like2 icon"></span>
+              <span class="number">183</span>
+            </span>
+            <h5 class="fact-item-info">Great Customers</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end facts -->
