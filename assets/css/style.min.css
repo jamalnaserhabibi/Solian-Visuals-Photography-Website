@@ -13,8 +13,77 @@ body {
   background: linear-gradient(to right,#0f172ac8,rgba(255, 255, 255, 0));
 }
  
+ .intoduse_text{
+  font-family: 'Poppins', sans-serif;
  
- 
+
+ }
+
+.mygoal-modern {
+  background: linear-gradient(145deg, #ffffff, #faf7f2);
+  padding: 60px 50px;
+  border-radius: 30px;
+  box-shadow: 0 25px 60px -15px rgba(0,0,0,0.08);
+  border: 1px solid rgba(182,139,92,0.15);
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.mygoal-modern:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 70px -15px rgba(0,0,0,0.15);
+}
+
+.goal-icon-wrap {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: #fcf9f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1);
+}
+
+.goal-icon-wrap span {
+  font-size: 3rem;
+  color:  #ffa800;;
+}
+
+.goal-title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c3e4f;
+  letter-spacing: -0.02em;
+}
+
+.goal-divider {
+  width: 80px;
+  height: 2px;
+  background: #ffa800;
+  margin: 0 auto 25px;
+}
+
+.goal-text {
+  font-size: 1.9rem;
+  color: #5b6876;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 750px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .mygoal-modern {
+    padding: 40px 25px;
+  }
+  .goal-text {
+    font-size: 1.6rem;
+  }
+}
  
 @media (max-width: 768px) {
    .site-header {
@@ -25,7 +94,7 @@ body {
     background-image: url('../img/img-header.jpg'), linear-gradient(to right, #0f172ac8, rgba(255, 255, 255, 0)) !important;
     background-blend-mode: overlay !important;
     background-size: cover !important;
-    background-position: right !important;
+    background-position: left !important;
     background-attachment: scroll !important;
   }
   
@@ -37,6 +106,82 @@ body {
 .bgImage .header{
  
 }
+.value-prop-card {
+      background: #fff;
+      border-radius: 2rem;
+      padding: 2.8rem 2rem;
+      box-shadow: 0 20px 35px -8px rgba(0,0,0,0.05), 0 5px 15px rgba(0,0,0,0.02);
+      transition: all 0.3s cubic-bezier(0.2,0,0,1);
+      height: 100%;
+      border: 1px solid rgba(182,139,92,0.15);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .value-prop-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 50px -15px rgba(0,0,0,0.15), 0 10px 25px -8px rgba(182,139,92,0.3);
+      border-color: rgba(182,139,92,0.3);
+    }
+    .value-icon-large {
+      font-size: 4.5rem;
+      color:  #ffa800;;
+      display: inline-block;
+      margin-bottom: 1.8rem;
+      background: #fcf9f4;
+      width: 110px;
+      height: 110px;
+      line-height: 110px !important;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 0 10px 20px -8px rgba(0,0,0,0.1);
+      transition: 0.2s;
+    }
+    .value-prop-card:hover .value-icon-large {
+      background: #c9a87c;
+      color: white;
+      box-shadow: 0 15px 25px -8px #ffa800;;
+    }
+    .card-title {
+      font-size: 2.1rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      letter-spacing: -0.02em;
+      color: #2c3e4f;
+    }
+    .card-sub {
+      font-size: 1.7rem;
+      font-weight: 300;
+      color: #ffa800;;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+      min-height: 55px;
+    }
+    .card-desc {
+      color: #5b6876;
+      font-size: 1.05rem;
+      padding: 0 1rem;
+    }
+    .gold-border-bottom {
+      width: 50px;
+      height: 2px;
+      background: #e3d2bc;
+      margin: 1.5rem auto 1rem;
+    }
+    /* extra stats row */
+    .stats-mini {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1.8rem;
+      border-top: 1px dashed #ddd;
+      padding-top: 1.5rem;
+    }
+    .stats-mini span {
+      font-weight: 600;
+      color: #2c3e4f;
+    }
+    .main-title-primary { font-size: 4rem; font-weight: 600; letter-spacing: -0.02em; }
+    .bg-soft-warm { background: #fcf9f5; }
 ::-moz-selection {
   color: #fff;
   text-shadow: none;
@@ -1187,6 +1332,9 @@ hr {
   }
 }
 @media screen and (max-width: 768px) {
+   .spacing-card {
+  margin: 50px 0;
+}
   .team-item .team-item-image {
     max-width: 370px;
   }
@@ -4178,7 +4326,7 @@ font-weight: 100;
 .block-section.bg-theme,
 .content-section.bg-theme {
   color: #fff;
-  background-color: #ffa800;
+  background-color:  #ffa800;
 }
 .block-section.bg-theme
   .button:not(.more-link):not(.btn):not([class*="icon-"]):not(.icon-social):not(
