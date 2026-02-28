@@ -5636,3 +5636,340 @@ img[class*="wp-image-"] {
     margin-top: 20px;
   }
 }
+
+
+
+
+
+
+
+
+
+/* portfolio */
+
+ 
+ 
+    /* remove old sidebar, adjust columns */
+    .content-section .col-md-9 {
+      width: 100% !important;
+    }
+    .sidebar {
+      display: none;  /* hide construction sidebar completely */
+    }
+    .entry-content {
+      margin-top: 20px;
+    }
+    /* grid for marketing gallery (3 columns) */
+    .portfolio-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 15px;
+    }
+    @media (max-width: 768px) {
+      .portfolio-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+    }
+    @media (max-width: 480px) {
+      .portfolio-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* property card styling (clean, fast grid) */
+    .property-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+      transition: all 0.25s ease;
+      border: 1px solid rgba(0,0,0,0.02);
+    }
+    .property-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 30px -12px rgba(0,0,0,0.15);
+    }
+    .property-thumb {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;  /* consistent rectangle */
+      background: #eee;
+      cursor: pointer;  /* indicates click to enlarge */
+    }
+    .property-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .property-card:hover .property-thumb img {
+      transform: scale(1.03);
+    }
+    /* image badge (optional) but we keep minimal */
+    .property-info {
+      padding: 18px 16px 20px;
+    }
+    .property-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      margin: 0 0 6px 0;
+      color: #1e2b37;
+      letter-spacing: -0.01em;
+    }
+    .property-location {
+      color: #6f7c87;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .property-location i {
+      font-size: 0.95rem;
+      color: #a0b3c2;
+    }
+    .see-more-link {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #2b4b6f;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+      padding: 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .see-more-link i {
+      margin-left: 5px;
+      transition: margin 0.2s;
+    }
+    .see-more-link:hover {
+      color: #0a1c2c;
+      border-bottom-color: #2b4b6f;
+    }
+    .see-more-link:hover i {
+      margin-left: 9px;
+    }
+    /* brochure download button – well designed as requested (brochure style) */
+    .btn-download-brochure {
+      display: inline-block;
+      background: #ffffff;
+      border: 1.5px solid #2b4b6f;
+      border-radius: 40px;
+      padding: 12px 34px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #2b4b6f;
+      transition: all 0.25s;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,20,30,0.05);
+      margin-top: 15px;
+    }
+    .btn-download-brochure i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+      color: #2b4b6f;
+    }
+    .btn-download-brochure:hover {
+      background: #2b4b6f;
+      color: #fff;
+      border-color: #2b4b6f;
+    }
+    .btn-download-brochure:hover i {
+      color: #fff;
+    }
+    /* optional: small note that brochure acts as download */
+    .brochure-note {
+      margin-top: 30px;
+      text-align: left;
+      border-top: 1px dashed #ccc;
+      padding-top: 25px;
+    }
+    /* AOS fade custom */
+    [data-aos] {
+      pointer-events: all;
+    }
+    /* main title secondary placeholder improved */
+    .main-title-secondary {
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: #5e6e7c;
+    }
+    /* ensure no download button on images, only on brochure */
+    .property-thumb .magnify-icon {
+      display: none;   /* we use magnific-popup but no extra download */
+    }
+    /* popup gallery remove any download btn (magnific has no download by default) */
+    .mfp-title, .mfp-counter {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+
+/* propertyGallary */
+ 
+    /* Property Gallery Page Styles */
+    .property-header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/img/img-services-01.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .property-header h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    
+    .property-header .location {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    
+    .property-description {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+    
+    /* Gallery Grid - 3 sample photos */
+    .property-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin: 40px 0;
+    }
+    
+    @media (max-width: 768px) {
+      .property-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .property-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      aspect-ratio: 4/3;
+      cursor: pointer;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .gallery-item::after {
+      content: '\f00e';
+      font-family: 'FontAwesome';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.9);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2b4b6f;
+      font-size: 1.1rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+    
+    /* Download button - well designed */
+    .download-section {
+      text-align: center;
+      margin: 60px 0 30px;
+      padding: 40px;
+      background: #f8f9fa;
+      border-radius: 16px;
+    }
+    
+    .btn-download-property {
+      display: inline-block;
+      background: #2b4b6f;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 16px 48px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 5px 15px rgba(43,75,111,0.3);
+    }
+    
+    .btn-download-property i {
+      margin-right: 10px;
+      font-size: 1.3rem;
+    }
+    
+    .btn-download-property:hover {
+      background: #1a3247;
+      color: white;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(43,75,111,0.4);
+    }
+    
+    .download-note {
+      margin-top: 15px;
+      color: #6c7a86;
+      font-size: 0.95rem;
+    }
+    
+    /* Back button */
+    .back-link {
+      display: inline-block;
+      margin: 20px 0 40px;
+      color: #2b4b6f;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .back-link i {
+      margin-right: 8px;
+      transition: transform 0.2s;
+    }
+    
+    .back-link:hover {
+      color: #1a3247;
+      text-decoration: none;
+    }
+    
+    .back-link:hover i {
+      transform: translateX(-3px);
+    }
+ 
