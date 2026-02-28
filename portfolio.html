@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solian Visuals – Portfolio | Real Estate Photography</title>
+
+  <!-- Bootstrap & core styles (kept as original structure) -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:300,500" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/Pe-icon-7-stroke.css" rel="stylesheet">
+  <link href="assets/css/owl.carousel.css" rel="stylesheet">
+  <link href="assets/css/owl.theme.css" rel="stylesheet">
+  <link href="assets/css/magnific-popup.css" rel="stylesheet">
+  <!-- Main style (your existing style.min.css) + AOS + custom overrides -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+  <!-- AOS CSS (added via CDN) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+</head>
+<body id="home">
+
+  <!-- header (unchanged except logo and active page) -->
+  <div class="header header-page">
+    <div class="site-header-affix-wrapper">
+      <header id="masthead" class="site-header header-dark" role="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="site-branding">
+                <h1 class="site-title title-image"><a href="index.html" rel="home"><img src="assets/img/logo-full-white.png" alt="Solian Visuals" class="img-responsive"></a></h1>
+              </div>
+            </div>
+            <div class="col-sm-9">
+              <nav id="site-navigation" class="main-navigation" role="navigation">
+                <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
+                  <span class="pe-7s-menu"></span><span class="sr-only">Humberger</span>
+                </button>
+                <div class="menu-testing-menu-container">
+                  <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
+                    <li class="menu-item"><a href="/">Home</a></li>
+                    <li class="menu-item"><a href="about.html">About</a></li>
+                    <li class="menu-item"><a href="service.html">Services</a></li>
+                    <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                    <li class="menu-item current-menu-item"><a href="portfolio.html">Portfolio</a></li>
+                    <li class="menu-item"><a href="contact.html">Contact</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <!-- main-title (adjusted text) -->
+  <div class="main-title block-section padd-40-top padd-60-btm bg-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1 class="main-title-primary">Marketing Gallery</h1>
+          <h4 class="main-title-secondary">curated collection of featured properties</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- breadcrumb (simplified) -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li class="active">Portfolio / Marketing Gallery</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- site-main : portfolio grid (public marketing gallery, 3 properties) -->
+  <div class="site-main">
+    <div class="content-section">
+      <div class="container">
+        <div class="row">
+          <!-- sidebar completely hidden via css, we use full col -->
+          <div class="col-md-12">
+            <div class="entry-content">
+
+              <!-- 3 property cards grid (with AOS fade-up) -->
+              <div class="portfolio-grid-3">
+
+                <!-- property 1: The Willow Estate -->
+<div class="property-card" data-aos="fade-up" data-aos-delay="0">
+  <div class="property-thumb" data-gallery="gallery1">
+    <img src="assets/img/img-services-01.jpg" alt="The Willow Estate - living room" class="img-responsive">
+  </div>
+  <div class="property-info">
+    <h3 class="property-title">Place Name</h3>
+    <div class="property-location"><i class="fa fa-map-marker"></i> Address name</div>
+    <a href="propertyGallary.html" class="see-more-link">See property gallery <i class="fa fa-arrow-right"></i></a>
+    
+  </div>
+  <!-- hidden gallery links -->
+  <div id="gallery1" style="display: none;">
+    <a href="assets/img/img-services-01.jpg" title="Willow Estate - living room"></a>
+    <a href="assets/img/img-service-01.jpg" title="Willow Estate - kitchen"></a>
+    <a href="assets/img/img-services-02.jpg" title="Willow Estate - master bedroom"></a>
+    <a href="assets/img/img-services-03.jpg" title="Willow Estate - exterior"></a>
+  </div>
+</div>
+
+<!-- property 2: Maple Ridge -->
+<div class="property-card" data-aos="fade-up" data-aos-delay="100">
+  <div class="property-thumb" data-gallery="gallery2">
+    <img src="assets/img/img-service-01.jpg" alt="Maple Ridge - facade" class="img-responsive">
+  </div>
+  <div class="property-info">
+    <h3 class="property-title">Place Name</h3>
+    <div class="property-location"><i class="fa fa-map-marker"></i> Address Name</div>
+    <a href="propertyGallary.html" class="see-more-link">See property gallery <i class="fa fa-arrow-right"></i></a>
+  </div>
+  <div id="gallery2" style="display: none;">
+    <a href="assets/img/img-service-01.jpg" title="Maple Ridge - front view"></a>
+    <a href="assets/img/img-services-02.jpg" title="Maple Ridge - open concept"></a>
+    <a href="assets/img/img-services-04.jpg" title="Maple Ridge - backyard"></a>
+    <a href="assets/img/img-service-02.jpg" title="Maple Ridge - dining area"></a>
+  </div>
+</div>
+
+<!-- property 3: Highland Park -->
+<div class="property-card" data-aos="fade-up" data-aos-delay="200">
+  <div class="property-thumb" data-gallery="gallery3">
+    <img src="assets/img/img-services-02.jpg" alt="Highland Park - living" class="img-responsive">
+  </div>
+  <div class="property-info">
+    <h3 class="property-title">Place Name</h3>
+    <div class="property-location"><i class="fa fa-map-marker"></i> Address name</div>
+    <a href="propertyGallary.html" class="see-more-link">See property gallery <i class="fa fa-arrow-right"></i></a>
+  </div>
+  <div id="gallery3" style="display: none;">
+    <a href="assets/img/img-services-02.jpg" title="Highland Park - great room"></a>
+    <a href="assets/img/img-services-03.jpg" title="Highland Park - kitchen island"></a>
+    <a href="assets/img/img-services-04.jpg" title="Highland Park - bedroom"></a>
+    <a href="assets/img/img-service-02.jpg" title="Highland Park - patio"></a>
+  </div>
+</div>
+
+              </div><!-- end grid -->
+
+           
+            </div><!-- entry-content -->
+          </div><!-- col-md-12 -->
+        </div><!-- row -->
+      </div><!-- container -->
+    </div><!-- content-section -->
+  </div><!-- site-main -->
+
+  <!-- footer (unchanged from original except minor text) -->
+  <footer id="colophon" class="site-footer bg-black" role="contentinfo" data-aos="fade-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <section class="widget">
+            <img src="assets/img/logo-full-white.png" alt="Solian Visuals" class="img-responsive marg-20-btm marg-20-top" />
+            <p>Professional real estate photos that help listings attract more attention and sell faster.</p>
+          </section>
+        </div>
+        <div class="col-md-2 col-sm-6 col-md-offset-1 col-sm-offset-0">
+          <section class="widget">
+            <h3 class="widget-title">Links</h3>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Booking</a></li>
+              <li><a href="#">Gallery</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <section class="widget">
+            <h3 class="widget-title">Our Pricing</h3>
+            <ul>
+              <li><a href="#">Basic Photo Package</a></li>
+              <li><a href="#">Standard Photo</a></li>
+              <li><a href="#">Premium Marketing Package</a></li>
+              <li><a href="#">ADD-ONS</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <section class="widget">
+            <h3 class="widget-title">Our Contact</h3>
+            <p>Fayetteville, Arkansas, United States.</p>
+            <p>info@solianvisualphotography.com<br />+1 479-214-5551</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- copyright -->
+  <section id="copyright" class="copyright bg-black">
+    <div class="container" >
+      <div class="row">
+        <div class="col-sm-6 copy-left">
+          <p><a target="_blank" href="https://zahinsoft.com">Dev: Zahinsoft</a>. All Right Reserved.</p>
+        </div>
+        <div class="col-sm-6 copy-right">
+          <ul class="social-icon">
+            <li><a href="#" target="_blank" class="icon-twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank" class="icon-facebook"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="#" target="_blank" class="icon-youtube"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#" target="_blank" class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- scripts (same as original + AOS) -->
+  <script src="assets/plugins/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/plugins/parallax.min.js"></script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/plugins/jquery.easing.js"></script>
+  <script src="assets/plugins/jquery.magnific-popup.min.js"></script>
+  <script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/plugins/isotope.pkgd.min.js"></script>
+  <script src="assets/plugins/owl.carousel.min.js"></script>
+  <script src="assets/js/script.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    (function($){
+      $(document).ready(function(){
+        // AOS initialization
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 40
+        });
+
+        // Initialize magnific popup for each property gallery
+        $('.popup-gallery').each(function() {
+          $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+              enabled: true
+            },
+            removalDelay: 300,
+            mainClass: 'mfp-fade'
+          });
+        });
+
+        // Alternative: Direct click on thumbnails to open their gallery
+        $('.property-thumb').on('click', function() {
+          var galleryId = $(this).data('gallery');
+          $('#' + galleryId + ' a:first').magnificPopup({
+            items: $('#' + galleryId + ' a').map(function() {
+              return {
+                src: $(this).attr('href'),
+                title: $(this).attr('title')
+              };
+            }).get(),
+            gallery: {
+              enabled: true
+            },
+            type: 'image',
+            removalDelay: 300,
+            mainClass: 'mfp-fade'
+          }).magnificPopup('open');
+        });
+      });
+    })(jQuery);
+</script>
+
+  <!-- ensure that the property thumb triggers the popup (we used custom trigger above) -->
+  <style>
+    /* additional minimal style for popup */
+    .white-popup {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .mfp-fade.mfp-bg { opacity: 0; transition: all 0.3s ease-out; }
+    .mfp-fade.mfp-bg.mfp-ready { opacity: 0.8; }
+    .mfp-fade.mfp-bg.mfp-removing { opacity: 0; }
+    .mfp-fade.mfp-wrap .mfp-content { opacity: 0; transition: all 0.3s ease-out; }
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content { opacity: 1; }
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content { opacity: 0; }
+    /* no download button anywhere */
+    .mfp-download { display: none !important; }
+  </style>
+</body>
+</html>
