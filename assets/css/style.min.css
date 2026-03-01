@@ -6061,6 +6061,7 @@ img[class*="wp-image-"] {
             margin: 0 auto;
             width: 100%;
             max-width: 700px;
+            padding: 30px;
         }
         .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange {
             background: #c7a254;
@@ -6075,6 +6076,7 @@ img[class*="wp-image-"] {
         .flatpickr-months .flatpickr-month {
             background: #fff;
             color: #1e2a2e;
+        
         }
         .flatpickr-current-month .flatpickr-monthDropdown-months {
             font-weight: 500;
