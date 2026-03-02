@@ -209,50 +209,50 @@
     </div>
 
 <!-- begin:additional-info -->
-    <div id="additional-info" class="additional-info block-section bg-grey padd-20-top padd-40-btm">
-      <div class="container" data-aos="fade-up" >
-        <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <i class="fa fa-phone"></i>
-              </div><!-- .contact-item-icon -->
-              <h4 class="contact-item-title">Phone number:</h4>
-              <div class="contact-item-info"> +1 479-214-5551</div>
-            </div><!-- .contact-item -->
-          </div><!-- .col-# -->
+    <div id="additional-info" style="background-color: #0f172a;" class="additional-info block-section bg-grey padd-20-top padd-40-btm">
+        <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fa fa-phone"></i>
+                            </div><!-- .contact-item-icon -->
+                            <h4 class="contact-item-title">Phone number:</h4>
+                            <div class="contact-item-info"> +1 479-214-5551</div>
+                        </div><!-- .contact-item -->
+                    </div><!-- .col-# -->
 
-          <div class="col-md-3 col-sm-6">
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <i class="fa fa-envelope-o"></i>
-              </div><!-- .contact-item-icon -->
-              <h4 class="contact-item-title">Email address:</h4>
-              <div class="contact-item-info">info@solianvisualphotography.com</div>
-            </div><!-- .contact-item -->
-          </div><!-- .col-# -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fa fa-envelope-o"></i>
+                            </div><!-- .contact-item-icon -->
+                            <h4 class="contact-item-title">Email address:</h4>
+                            <div class="contact-item-info">info@solianvisualphotography.com</div>
+                        </div><!-- .contact-item -->
+                    </div><!-- .col-# -->
 
-          <div class="col-md-3 col-sm-6">
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <i class="fa fa-map-marker"></i>
-              </div><!-- .contact-item-icon -->
-              <h4 class="contact-item-title">Office address:</h4>
-              <div class="contact-item-info">Fayetteville, Arkansas</div>
-            </div><!-- .contact-item -->
-          </div><!-- .col-# -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div><!-- .contact-item-icon -->
+                            <h4 class="contact-item-title">Office address:</h4>
+                            <div class="contact-item-info">Fayetteville, Arkansas</div>
+                        </div><!-- .contact-item -->
+                    </div><!-- .col-# -->
 
-          <div class="col-md-3 col-sm-6">
-            <div class="contact-item">
-              <div class="contact-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </div><!-- .contact-item-icon -->
-              <h4 class="contact-item-title">Opening times:</h4>
-              <div class="contact-item-info">Mon - Fri: 7.00 - 17:00</div>
-            </div><!-- .contact-item -->
-          </div><!-- .col-# -->
-        </div><!-- .row -->
-      </div><!-- container -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <i class="fa fa-clock-o"></i>
+                            </div><!-- .contact-item-icon -->
+                            <h4 class="contact-item-title">Opening times:</h4>
+                            <div class="contact-item-info">Mon - Fri: 7.00 - 17:00</div>
+                        </div><!-- .contact-item -->
+                    </div><!-- .col-# -->
+                </div>
+            </div><!-- container -->
     </div><!-- #additional-info -->
     <!-- end:additional-info -->
 
@@ -794,6 +794,53 @@
  
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+ 
+<!-- Add this script right after your existing AOS.init() script -->
+<script>
+// Fetch hero data from API
+fetch('https://salianvisuals.ejazquran.space/api/v1/hero')
+  .then(response => response.json())
+  .then(data => {
+    if (data.success && data.data) {
+      const hero = data.data;
+      
+      // Update title
+      const titleElement = document.querySelector('.brannedName');
+      if (titleElement) titleElement.textContent = hero.title;
+      
+      // Update subtitle (the text after <br>)
+      const captionTitle = document.querySelector('.caption-title');
+      if (captionTitle) {
+        const br = captionTitle.querySelector('br');
+        if (br && br.nextSibling) {
+          br.nextSibling.textContent = hero.subtitle;
+        }
+      }
+      
+      // Update description
+      const descElement = document.querySelector('.header-caption p');
+      if (descElement) descElement.textContent = hero.description;
+      
+      // Set background image inline on bgImage div
+      const bgImageElement = document.querySelector('.bgImage');
+      if (bgImageElement && hero.image_url) {
+        bgImageElement.style.backgroundImage = `linear-gradient(to right, #0f172ac8, rgba(255, 255, 255, 0)), url('${hero.image_url}')`;
+        bgImageElement.style.backgroundSize = 'cover';
+        bgImageElement.style.backgroundPosition = 'center';
+        bgImageElement.style.backgroundRepeat = 'no-repeat';
+      }
+      
+      // Remove the data-parallax from header to prevent conflicts
+      const headerElement = document.querySelector('.header');
+      if (headerElement) {
+        headerElement.removeAttribute('data-parallax');
+        headerElement.removeAttribute('data-image-src');
+      }
+    }
+  })
+  .catch(error => console.error('Error fetching hero data:', error));
+</script>
 
 <script>
 AOS.init({
