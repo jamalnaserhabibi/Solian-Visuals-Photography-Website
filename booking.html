@@ -18,10 +18,201 @@
     <link href="assets/css/owl.carousel.css" rel="stylesheet">
     <link href="assets/css/owl.theme.css" rel="stylesheet">
     <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <!-- flatpickr - elegant calendar -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
     <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <style>
+        /* additional styling for flatpickr inline */
+     
+   
+        .calendar-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
+        .calendar-header h3 {
+            font-size: 32px;
+            font-weight: 400;
+            color: #1e2a2e;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .calendar-header p {
+            color: #8c7b6b;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .calendar-header hr.luxury {
+            width: 80px;
+            height: 2px;
+            background: #c7a254;
+            border: none;
+            margin: 20px auto;
+        }
+
+        /* Booking form luxury styling */
+        .booking-form-luxury {
+            background: #fff;
+            border-radius: 30px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0e8dd;
+        }
+
+        .booking-form-luxury .form-control {
+            border: 1px solid #e7daca;
+            border-radius: 16px;
+            padding: 12px 20px;
+            height: auto;
+            font-size: 15px;
+            background: #fbf8f2;
+            transition: all 0.3s;
+        }
+
+        .booking-form-luxury .form-control:focus {
+            border-color: #c7a254;
+            box-shadow: 0 0 0 3px rgba(199, 162, 84, 0.1);
+            background: #fff;
+        }
+
+        .booking-form-luxury label {
+            color: #1e2a2e;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .booking-form-luxury .lead {
+            font-size: 2.3rem;
+            font-weight: 300;
+            color: #c7a254;
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Checkbox styling */
+        .booking-form-luxury .checkbox {
+            margin: 8px 0;
+        }
+
+        .booking-form-luxury .checkbox label {
+            font-weight: 400;
+            color: #4a3f37;
+        }
+
+        .booking-form-luxury .checkbox input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        /* Add-ons container */
+        .addons-container {
+            background: #fbf8f2;
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 5px;
+            border: 1px solid #e7daca;
+        }
+
+        /* Button styling */
+        .booking-form-luxury .button.btn-square {
+            background: #c7a254;
+            color: #fff;
+            border: none;
+            padding: 16px 50px;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 40px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(199, 162, 84, 0.2);
+        }
+
+        .booking-form-luxury .button.btn-square:hover {
+            background: #b38d3c;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(199, 162, 84, 0.3);
+        }
+
+        .booking-form-luxury .button.btn-square:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive fixes */
+        @media (max-width: 768px) {
+            .booking-form-luxury {
+                padding: 25px;
+            }
+            
+            .calendar-container {
+                padding: 20px;
+            }
+            
+            .calendar-header h3 {
+                font-size: 26px;
+            }
+        }
+
+        /* Fix for footer links */
+        .site-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .site-footer ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .site-footer ul li a:hover {
+            color: #c7a254;
+        }
+
+        /* Social icons styling */
+        .social-icon {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+        
+        .social-icon li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .social-icon li a {
+            color: #fff;
+            font-size: 18px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .social-icon li a:hover {
+            opacity: 1;
+            color: #c7a254;
+        }
+
+        /* Responsive footer */
+        @media (max-width: 767px) {
+            .copy-left, .copy-right {
+                text-align: center !important;
+            }
+            
+            .social-icon {
+                text-align: center;
+                margin-top: 15px;
+            }
+            
+            .social-icon li {
+                margin: 0 8px;
+            }
+        }
+    </style>
 </head>
 
 <body id="home">
@@ -49,11 +240,12 @@
                                 <div class="menu-testing-menu-container">
                                     <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
                                         <li class="menu-item"><a href="/">Home</a></li>
-                                        <li class="menu-item"><a href="about.html">About</a></li>
                                         <li class="menu-item"><a href="service.html">Services</a></li>
                                         <li class="menu-item"><a href="pricing.html">Pricing</a></li>
                                         <li class="menu-item"><a href="Portfolio.html">Portfolio</a></li>
-                                        <li class="menu-item current-menu-item"><a href="booking.html">Booking</a></li>
+                                        <li class="menu-item"><a href="about.html">About</a></li>
+                                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+
                                     </ul>
                                 </div>
                             </nav>
@@ -139,7 +331,7 @@
             </div>
         </div>
 
-        <!-- BEGIN LUXURY BOOKING SECTION (map removed, large calendar added) -->
+        <!-- BEGIN LUXURY BOOKING SECTION -->
         <div id="luxury-booking" class="block-section bg-white">
             <div class="container">
                 <!-- Large elegant calendar section -->
@@ -148,34 +340,20 @@
                         <div class="calendar-container">
                             <div class="calendar-header">
                                 <h3>Select Your Preferred Date</h3>
-                                <p>Click on any available date below </p>
+                                <p>Fill and submit the form to request an available date</p>
                                 <hr class="luxury">
                             </div>
-
-                            <div id="luxury-calendar" style="max-width: 700px; margin: 0 auto;"></div>
-
-                            <input type="text" id="calendar-input"
-                                style="opacity:0; height:0; padding:0; border:0; width:0; position:absolute; pointer-events:none;"
-                                aria-hidden="true">
+                            <!-- Calendar will be injected here by flatpickr -->
+                            <div id="luxury-calendar" style="max-width: 800px; margin: 0 auto;"></div>
                         </div>
-                    </div>
-                </div>
-
-
-                <div class="row row-no-margin" style="margin-top: -20px;">
-                    <div class="col-md-12">
-
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-
-                        <div class="booking-form-luxury marg-60-top marg-40-btm">
+                        <div class="booking-form-luxury marg-20-top marg-40-btm">
                             <form class="contact-form" id="bookingForm">
-                                <p class="lead"
-                                    style="font-size: 1.3rem; font-weight: 300; color: #c7a254; text-align: center; margin-bottom: 30px;">
-                                    Complete your reservation</p>
+                                <p class="lead">Complete your reservation</p>
 
                                 <div class="form-group">
                                     <label for="fullname">Full name *</label>
@@ -196,14 +374,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-                                <div class="form-group">
-                                    <label for="booking_date">Selected date *</label>
-                                    <input type="text" class="form-control" id="booking_date"
-                                        placeholder="Click a date on calendar" readonly required
-                                        style="background: #f9f6f1; cursor: pointer;">
-                                </div>
+ 
 
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -230,10 +401,46 @@
                                                 <option value="Basic Photo">Basic Photo Package</option>
                                                 <option value="Standard Photo">Standard Photo</option>
                                                 <option value="Premium Marketing">Premium Marketing Package</option>
-                                                <option value="Add-ons">Add-ons (Twilight, Video)</option>
                                             </select>
                                         </div>
                                     </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Add-ons (select any that apply)</label>
+                                    <div class="addons-container">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="Drone Photos"> Drone Photos <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$60</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="Drone Video"> Drone Video <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$90</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="Interior Walkthrough Video"> Interior Walkthrough Video <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$150</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="Twilight Photos"> Twilight Photos <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$80</span></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="Floor Plan"> Floor Plan <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$40</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="Extra Photos (each)"> Extra Photos (each) <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$5</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="Large Property"> Large Property <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$40</span></label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="Rush Delivery"> Rush Delivery <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$40</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <small class="form-text text-muted" style="margin-top: 8px; display: block; color: #8c7b6b;">Select any add-ons to enhance your package</small>
                                 </div>
 
                                 <div class="form-group">
@@ -250,8 +457,8 @@
 
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" required> I agree to the <a href="#">terms of service</a>
-                                        and <a href="#">cancellation policy</a> *
+                                        <input type="checkbox" required> I agree to the <a href="#" style="color: #c7a254;">terms of service</a>
+                                        and <a href="#" style="color: #c7a254;">cancellation policy</a> *
                                     </label>
                                 </div>
 
@@ -268,7 +475,7 @@
         </div><!-- #luxury-booking -->
     </div><!-- .site-main -->
 
-    <!-- footer unchanged (but ensure links) -->
+    <!-- footer -->
     <footer id="colophon" class="site-footer bg-black" role="contentinfo" data-aos="fade-up">
         <div class="container">
             <div class="row">
@@ -285,7 +492,7 @@
                         <ul>
                             <li><a href="about.html">About us</a></li>
                             <li><a href="service.html">Service</a></li>
-                            <li><a href="Portfolio">Portfolio</a></li>
+                            <li><a href="Portfolio.html">Portfolio</a></li>
                             <li><a href="booking.html">Booking</a></li>
                             <li><a href="#">Gallery</a></li>
                         </ul>
@@ -317,7 +524,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 copy-left">
-                    <p><a target="_blank" href="https://zahinsoft.com">Dev: Zahinsoft</a>. All rights reserved.</p>
+                    <p><a target="_blank" href="https://zahinsoft.com" style="color: #c7a254;">Dev: Zahinsoft</a>. All rights reserved.</p>
                 </div>
                 <div class="col-sm-6 copy-right">
                     <ul class="social-icon">
@@ -341,85 +548,8 @@
     <script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
     <script src="assets/plugins/isotope.pkgd.min.js"></script>
     <script src="assets/plugins/owl.carousel.min.js"></script>
-    <!-- flatpickr -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        $(document).ready(function () {
-            // init flatpickr on hidden input, but show calendar in div
-            const calendarInput = document.getElementById("calendar-input");
-            const bookingDateField = document.getElementById("booking_date");
-
-            const fp = flatpickr(calendarInput, {
-                inline: true,        // always visible
-                appendTo: document.getElementById('luxury-calendar'),
-                minDate: "today",
-                dateFormat: "F j, Y",
-                onChange: function (selectedDates, dateStr, instance) {
-                    // update the form field
-                    bookingDateField.value = dateStr;
-                },
-
-                onReady: function (selectedDates, dateStr, instance) {
-                    instance.calendarContainer.classList.add('luxury-calendar');
-                }
-            });
-
-
-            bookingDateField.addEventListener('click', function () {
-
-            });
-
-
-
-            // form submission
-            $('#bookingForm').submit(function (e) {
-                e.preventDefault();
-                alert('Thank you for your booking request. Our team will contact you shortly.');
-                // you can add ajax here
-            });
-        });
-    </script>
-    <style>
-        /* additional styling for flatpickr inline */
-        .flatpickr-calendar.inline {
-            width: 100%;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
-            /* border: 5px solid #e7daca; */
-            background: #fff;
-        }
-
-        .flatpickr-day {
-            border-radius: 10px;
-            margin: 3px;
-            font-weight: 400;
-        }
-
-        .flatpickr-day.selected {
-            background: #c7a254 !important;
-            border: none;
-            color: #fff;
-            font-weight: 500;
-        }
-
-        .flatpickr-day.today {
-            border: 1px solid #c7a254;
-        }
-
-        .flatpickr-day:hover {
-            background: #f3ede5;
-        }
-
-        .flatpickr-months .flatpickr-prev-month,
-        .flatpickr-months .flatpickr-next-month {
-            fill: #c7a254;
-        }
-
-        .flatpickr-current-month .flatpickr-monthDropdown-months {
-            font-weight: 500;
-            color: #1e2a2e;
-        }
-    </style>
+   
+  
 </body>
 
 </html>
