@@ -1,82 +1,91 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <style>
+      /* Luxury animations */
+      @keyframes luxuryGlow {
+        0% {
+          text-shadow: 0 0 30px rgba(255, 168, 0, 0.3);
+        }
+        50% {
+          text-shadow: 0 0 50px rgba(255, 168, 0, 0.8);
+        }
+        100% {
+          text-shadow: 0 0 30px rgba(255, 168, 0, 0.3);
+        }
+      }
 
+      .brannedName {
+        animation: luxuryGlow 3s infinite;
 
-<style>
-  
-/* Luxury animations */
-@keyframes luxuryGlow {
-  0% { text-shadow: 0 0 30px rgba(255,168,0,0.3); }
-  50% { text-shadow: 0 0 50px rgba(255,168,0,0.8); }
-  100% { text-shadow: 0 0 30px rgba(255,168,0,0.3); }
-}
+        letter-spacing: 4px;
+        background: linear-gradient(135deg, #fff 0%, #ffa800 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
 
-.brannedName {
-  animation: luxuryGlow 3s infinite;
-  
-  letter-spacing: 4px;
-  background: linear-gradient(135deg, #fff 0%, #ffa800 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+      .caption-title br + text {
+        font-weight: 700 !important;
+        letter-spacing: 2px;
+        /* position: relative; */
+      }
 
-.caption-title br + text {
-  font-weight: 700 !important;
-  letter-spacing: 2px;
-  /* position: relative; */
-}
+      .caption-title br + text::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background: linear-gradient(90deg, #ffa800, transparent);
+      }
 
-.caption-title br + text::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, #ffa800, transparent);
-}
+      .header-caption p {
+        font-weight: 300 !important;
+        letter-spacing: 1px;
+        line-height: 1.8 !important;
+        opacity: 0.9;
+      }
 
-.header-caption p {
-  font-weight: 300 !important;
-  letter-spacing: 1px;
-  line-height: 1.8 !important;
-  opacity: 0.9;
-}
+      /* Luxury button hover effects */
+      .btn-warning,
+      .btn-bordered {
+        position: relative;
+        overflow: hidden;
+      }
 
-/* Luxury button hover effects */
-.btn-warning, .btn-bordered {
-  position: relative;
-  overflow: hidden;
-}
+      .btn-warning::before,
+      .btn-bordered::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.6s,
+          height 0.6s;
+      }
 
-.btn-warning::before, .btn-bordered::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.3);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
+      .btn-warning:hover::before,
+      .btn-bordered:hover::before {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
 
-.btn-warning:hover::before, .btn-bordered:hover::before {
-  width: 300px;
-  height: 300px;
-}
-</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-<meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@400;700&family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <meta name="description" content="construction is awesome bootstrap responsive construction business theme"> -->
@@ -85,30 +94,28 @@
     <title>Solian Visuals Photography</title>
 
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  
+
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/css/Pe-icon-7-stroke.css" rel="stylesheet" />
     <link href="assets/css/owl.carousel.css" rel="stylesheet" />
     <link href="assets/css/owl.theme.css" rel="stylesheet" />
     <link href="assets/css/magnific-popup.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.min.css" />
- 
-<link rel="icon" href="./assets/img/favico.png" type="image/png">
 
+    <link rel="icon" href="./assets/img/favico.png" type="image/png" />
   </head>
 
   <body id="home" class="home">
     <div class="bgImage">
-  
-    <div
-      class="header"
-      data-parallax="scroll"
-      data-image-src="assets/img/img-header.jpg"
-      data-speed="0.1"
-       data-position="left center"
-    >
-      <!-- begin:topbar social media links and  -->
-      <!-- <div id="topbar" class="topbar">
+      <div
+        class="header"
+        data-parallax="scroll"
+        data-image-src="assets/img/img-header.jpg"
+        data-speed="0.1"
+        data-position="left center"
+      >
+        <!-- begin:topbar social media links and  -->
+        <!-- <div id="topbar" class="topbar">
         <div class="container">
           <div class="row">
             <div class="col-sm-8">
@@ -129,93 +136,110 @@
         </div> 
       </div>  -->
 
-      <div class="site-header-affix-wrapper">
-        <header id="masthead" class="site-header" role="banner">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-3">
-                <div class="site-branding">
-                  <h1 class="site-title title-image">
-                    <a href="index.html" rel="home"
-                      ><img
-                        src="assets/img/logo-full-white.png"
-                        alt="Solian Visuals Photography"
-                        class="img-responsive"
-                    /></a>
-                  </h1>
+        <div class="site-header-affix-wrapper">
+          <header id="masthead" class="site-header" role="banner">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="site-branding">
+                    <h1 class="site-title title-image">
+                      <a href="index.html" rel="home"
+                        ><img
+                          src="assets/img/logo-full-white.png"
+                          alt="Solian Visuals Photography"
+                          class="img-responsive"
+                      /></a>
+                    </h1>
+                  </div>
                 </div>
-              </div>
 
-              <div class="col-sm-9">
-                <nav
-                  id="site-navigation"
-                  class="main-navigation"
-                  role="navigation"
-                >
-                  <button
-                    class="menu-toggle"
-                    type="button"
-                    aria-controls="primary-menu"
-                    aria-expanded="false"
+                <div class="col-sm-9">
+                  <nav
+                    id="site-navigation"
+                    class="main-navigation"
+                    role="navigation"
                   >
-                    <span class="pe-7s-menu"></span
-                    ><span class="sr-only">Humberger</span>
-                  </button>
-                  <!-- current-menu-item must change in every page -->
-                  <div class="menu-testing-menu-container">
-                    <ul
-                      id="primary-menu"
-                      class="menu nav-menu"
+                    <button
+                      class="menu-toggle"
+                      type="button"
+                      aria-controls="primary-menu"
                       aria-expanded="false"
                     >
-                      <li class="menu-item current-menu-item"><a href="/">Home</a></li>
-                      <li class="menu-item"><a href="service.html">Services</a></li>
-                      <li class="menu-item"><a href="pricing.html">Pricing</a></li>
-                      <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
-                      <li class="menu-item"><a href="about.html">About</a></li>
-                      <li class="menu-item"><a href="contact.html">Contact</a></li>
-                    </ul>
-                  </div>
-                </nav>
+                      <span class="pe-7s-menu"></span
+                      ><span class="sr-only">Humberger</span>
+                    </button>
+                    <!-- current-menu-item must change in every page -->
+                    <div class="menu-testing-menu-container">
+                      <ul
+                        id="primary-menu"
+                        class="menu nav-menu"
+                        aria-expanded="false"
+                      >
+                        <li class="menu-item current-menu-item">
+                          <a href="/">Home</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="service.html">Services</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="about.html">About</a>
+                        </li>
+                        <li class="menu-item">
+                          <a href="contact.html">Contact</a>
+                        </li>
+                        <li class="menu-item sign-up-btn">
+                          <a href="https://salianvisuals.ejazquran.space/login"
+                            >Sign Up</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
               </div>
             </div>
-          </div>
-        </header>
-      </div>
+          </header>
+        </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="header-caption">
-              <h2 class="caption-title">
-                <span class="brannedName"  >Solian Visuals Photography</span>
-                <br />Real Estate Photography in Northwest Arkansas
-              </h2>
-              <p>
-                Professional listing photos that make properties stand out
-                online Professional listing photos that make properties stand
-                out online 
-              </p>
-              <div class="header-action-button">
-                <a class="btn btn-default btn-bordered btn-md" href="https://salianvisuals.ejazquran.space/login">Sign Up</a>
-                <a class="btn btn-warning btn-md" href="booking.html">Book a Shoot</a>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="header-caption">
+                <h2 class="caption-title">
+                  <span class="brannedName">Solian Visuals Photography</span>
+                  <br />Real Estate Photography in Northwest Arkansas
+                </h2>
+                <p>
+                  Professional listing photos that make properties stand out
+                  online Professional listing photos that make properties stand
+                  out online
+                </p>
+                <div class="header-action-button">
+                  <a
+                    class="btn btn-default btn-bordered btn-md"
+                    href="https://salianvisuals.ejazquran.space/login"
+                    >Sign Up</a
+                  >
+                  <a class="btn btn-warning btn-md" href="booking.html"
+                    >Book a Shoot</a
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    </div>
-
-
-
-  
- 
 
     <!-- begin:work -->
     <div id="work" class="work content-section bg-grey">
-      <div class="container" >
+      <div class="container">
         <div class="row" data-aos="fade-up">
           <div class="col-md-12">
             <div class="section-title">
@@ -246,8 +270,6 @@
             <!-- .work-filter -->
 
             <ul class="work-grid">
-
-              
               <li class="work-item buildings">
                 <a
                   href="assets/img/img-work-01.jpg"
@@ -371,53 +393,73 @@
     <!-- #work -->
 
     <!-- begin:additional-info -->
-    <div id="additional-info" style="background-color: #2B2B2B;" class="additional-info block-section bg-grey padd-20-top padd-40-btm">
-        <div class="container" >
-                <div class="row" data-aos="fade-up">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fa fa-phone"></i>
-                            </div><!-- .contact-item-icon -->
-                            <h4 class="contact-item-title">Phone number:</h4>
-                            <div class="contact-item-info"> +1 479-214-5551</div>
-                        </div><!-- .contact-item -->
-                    </div><!-- .col-# -->
+    <div
+      id="additional-info"
+      style="background-color: #2b2b2b"
+      class="additional-info block-section bg-grey padd-20-top padd-40-btm"
+    >
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-3 col-sm-6">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <!-- .contact-item-icon -->
+              <h4 class="contact-item-title">Phone number:</h4>
+              <div class="contact-item-info">+1 479-214-5551</div>
+            </div>
+            <!-- .contact-item -->
+          </div>
+          <!-- .col-# -->
 
-                    <div class="col-md-3 col-sm-6">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fa fa-envelope-o"></i>
-                            </div><!-- .contact-item-icon -->
-                            <h4 class="contact-item-title">Email address:</h4>
-                            <div class="contact-item-info">info@solianvisualphotography.com</div>
-                        </div><!-- .contact-item -->
-                    </div><!-- .col-# -->
+          <div class="col-md-3 col-sm-6">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa fa-envelope-o"></i>
+              </div>
+              <!-- .contact-item-icon -->
+              <h4 class="contact-item-title">Email address:</h4>
+              <div class="contact-item-info">
+                info@solianvisualphotography.com
+              </div>
+            </div>
+            <!-- .contact-item -->
+          </div>
+          <!-- .col-# -->
 
-                    <div class="col-md-3 col-sm-6">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fa fa-map-marker"></i>
-                            </div><!-- .contact-item-icon -->
-                            <h4 class="contact-item-title">Office address:</h4>
-                            <div class="contact-item-info">Fayetteville, Arkansas</div>
-                        </div><!-- .contact-item -->
-                    </div><!-- .col-# -->
+          <div class="col-md-3 col-sm-6">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <!-- .contact-item-icon -->
+              <h4 class="contact-item-title">Office address:</h4>
+              <div class="contact-item-info">Fayetteville, Arkansas</div>
+            </div>
+            <!-- .contact-item -->
+          </div>
+          <!-- .col-# -->
 
-                    <div class="col-md-3 col-sm-6">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fa fa-clock-o"></i>
-                            </div><!-- .contact-item-icon -->
-                            <h4 class="contact-item-title">Opening times:</h4>
-                            <div class="contact-item-info">Mon - Fri: 7.00 - 17:00</div>
-                        </div><!-- .contact-item -->
-                    </div><!-- .col-# -->
-                </div>
-            </div><!-- container -->
-    </div><!-- #additional-info -->
+          <div class="col-md-3 col-sm-6">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </div>
+              <!-- .contact-item-icon -->
+              <h4 class="contact-item-title">Opening times:</h4>
+              <div class="contact-item-info">Mon - Fri: 7.00 - 17:00</div>
+            </div>
+            <!-- .contact-item -->
+          </div>
+          <!-- .col-# -->
+        </div>
+      </div>
+      <!-- container -->
+    </div>
+    <!-- #additional-info -->
     <!-- end:additional-info -->
-<hr>
+    <hr />
     <!-- begin:cta -->
     <div id="cta" class="cta block-section padd-40-top padd-40-btm bg-dark">
       <div class="container">
@@ -443,97 +485,101 @@
     <!-- #cta -->
     <!-- end:cta -->
 
- 
-<div id="how-it-works" class="block-section bg-white padd-60-top padd-60-btm">
-  <div class="container">
-    
-    <div class="row" data-aos="fade-up">
-      <div class="col-md-12">
-        <div class="section-title">
-          <h2>How It Works</h2>
-          <p class="text-muted" style="font-size: 16px; margin-top: -20px; margin-bottom: 20px;">
-            Fast, professional & hassle‑free – from booking to delivery
-          </p>
+    <div
+      id="how-it-works"
+      class="block-section bg-white padd-60-top padd-60-btm"
+    >
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h2>How It Works</h2>
+              <p
+                class="text-muted"
+                style="font-size: 16px; margin-top: -20px; margin-bottom: 20px"
+              >
+                Fast, professional & hassle‑free – from booking to delivery
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row steps-row">
+          <div class="col-md-3 col-sm-6 step-connector">
+            <div class="step-item" data-aos="fade-up">
+              <div class="step-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </div>
+              <div class="step-number"><span>Step 1</span></div>
+              <h4 class="step-title">Schedule shoot</h4>
+              <p class="step-desc">
+                Pick a date & time online. We’ll confirm within 2 hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- step 2 -->
+          <div class="col-md-3 col-sm-6 step-connector">
+            <div class="step-item" data-aos="fade-up">
+              <div class="step-icon">
+                <i class="fa fa-camera-retro"></i>
+              </div>
+              <div class="step-number"><span>Step 2</span></div>
+              <h4 class="step-title">I photograph the property</h4>
+              <p class="step-desc">
+                On‑site shoot using professional gear, HDR & detail‑oriented
+                framing.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 step-connector">
+            <div class="step-item" data-aos="fade-up">
+              <div class="step-icon">
+                <i class="fa fa-cloud-upload"></i>
+              </div>
+              <div class="step-number"><span>Step 3</span></div>
+              <h4 class="step-title">Photos uploaded online</h4>
+              <p class="step-desc">
+                Next day you receive a private gallery – ready to preview.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="step-item" data-aos="fade-up">
+              <div class="step-icon">
+                <i class="fa fa-download"></i>
+              </div>
+              <div class="step-number"><span>Step 4</span></div>
+              <h4 class="step-title">Agent downloads gallery</h4>
+              <p class="step-desc">
+                High‑res images, direct download, print & social media ready.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row marg-40-top" data-aos="fade-up">
+          <div class="col-md-12 text-center">
+            <p style="font-size: 15px; color: #6b6e80">
+              <i class="fa fa-shield" style="color: #ffa800"></i>
+              Every gallery is delivered with a license for commercial use.
+              <a href="#" style="text-decoration: underline; color: #0f172a"
+                >see sample gallery</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </div>
-
-    
-    <div class="row steps-row">
-    
-      <div class="col-md-3 col-sm-6 step-connector">
-        <div class="step-item" data-aos="fade-up">
-          <div class="step-icon">
-            <i class="fa fa-calendar-check-o"></i>
-          </div>
-          <div class="step-number"><span>Step 1</span></div>
-          <h4 class="step-title">Schedule shoot</h4>
-          <p class="step-desc">
-            Pick a date & time online. We’ll confirm within 2 hours.
-          </p>
-        </div>
-      </div>
-
-      <!-- step 2 -->
-      <div class="col-md-3 col-sm-6 step-connector">
-        <div class="step-item" data-aos="fade-up">
-          <div class="step-icon">
-            <i class="fa fa-camera-retro"></i>
-          </div>
-          <div class="step-number"><span>Step 2</span></div>
-          <h4 class="step-title">I photograph the property</h4>
-          <p class="step-desc">
-            On‑site shoot using professional gear, HDR & detail‑oriented framing.
-          </p>
-        </div>
-      </div>
-
-    
-      <div class="col-md-3 col-sm-6 step-connector">
-        <div class="step-item" data-aos="fade-up">
-          <div class="step-icon">
-            <i class="fa fa-cloud-upload"></i>
-          </div>
-          <div class="step-number"><span>Step 3</span></div>
-          <h4 class="step-title">Photos uploaded online</h4>
-          <p class="step-desc">
-            Next day you receive a private gallery – ready to preview.
-          </p>
-        </div>
-      </div>
-
-   
-      <div class="col-md-3 col-sm-6">
-        <div class="step-item" data-aos="fade-up">
-          <div class="step-icon">
-            <i class="fa fa-download"></i>
-          </div>
-          <div class="step-number"><span>Step 4</span></div>
-          <h4 class="step-title">Agent downloads gallery</h4>
-          <p class="step-desc">
-            High‑res images, direct download, print & social media ready.
-          </p>
-        </div>
-      </div>
-    </div>  
-
-    
-    <div class="row marg-40-top" data-aos="fade-up">
-      <div class="col-md-12 text-center">
-        <p style="font-size: 15px; color: #6b6e80;">
-          <i class="fa fa-shield" style="color: #ffa800;"></i> 
-          Every gallery is delivered with a license for commercial use.
-          <a href="#" style="text-decoration: underline; color: #0f172a;">see sample gallery</a>
-        </p>
-      </div>
-    </div>
-  </div> 
-</div>  
- 
-
 
     <!-- begin:about -->
-    <div id="about" class="block-section image-block bg-white" data-aos="fade-up">
+    <div
+      id="about"
+      class="block-section image-block bg-white"
+      data-aos="fade-up"
+    >
       <div class="container-fluid container-no-padding">
         <div class="row row-no-margin">
           <div class="image-block-item col-md-6 col-sm-5 col-xs-12">
@@ -551,7 +597,7 @@
       <!-- .container-fluid -->
 
       <div class="container clear">
-        <div class="row ">
+        <div class="row">
           <div
             class="col-md-5 col-md-offset-7 col-sm-6 col-sm-offset-6 col-xs-10 col-xs-offset-1 padd-80-top padd-60-btm"
           >
@@ -559,9 +605,12 @@
               <h2>Who We Are?</h2>
             </div>
             <p class="who_we_are">
-            We are a team of local real estate photographers dedicated to showcasing properties at their best. <br>We specialize in
-            listing photography because professional photos make a difference—better presentation attracts more attention and leads
-            to faster sales. Our goal is simple: help agents present every listing professionally and consistently.
+              We are a team of local real estate photographers dedicated to
+              showcasing properties at their best. <br />We specialize in
+              listing photography because professional photos make a
+              difference—better presentation attracts more attention and leads
+              to faster sales. Our goal is simple: help agents present every
+              listing professionally and consistently.
             </p>
             <p>
               <a
@@ -580,9 +629,12 @@
     <!-- #about -->
     <!-- end:about -->
 
-
-  <!-- begin:testimonial -->
-    <div id="testimonial" class="block-section image-block bg-light" data-aos="fade-up">
+    <!-- begin:testimonial -->
+    <div
+      id="testimonial"
+      class="block-section image-block bg-light"
+      data-aos="fade-up"
+    >
       <div class="container-fluid container-no-padding">
         <div class="row row-no-margin">
           <div
@@ -615,41 +667,49 @@
               data-ride="carousel"
             >
               <ol class="carousel-indicators">
-                <li data-target="#testimony" data-slide-to="0" class="active"></li>
+                <li
+                  data-target="#testimony"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
                 <li data-target="#testimony" data-slide-to="1" class=""></li>
                 <li data-target="#testimony" data-slide-to="2" class=""></li>
               </ol>
               <!-- .carousel-indicators -->
-              <div class="carousel-inner  who_we_are"  role="listbox">
-               
+              <div class="carousel-inner who_we_are" role="listbox">
                 <div class="item active">
-                  <p >
-    In 2025, our photography team completed over 10,000 shoots. Our data shows clients trust us to present their properties at the highest standard, attracting serious buyers efficiently.                   
-                  </p>
-                 
-                    <div class="header-action-button">
-                <a class="btn btn-warning btn-md" href="#">Book a Shoot</a>
-             
-              </div>
-                </div>
-               
-              
-                <div class="item">
                   <p>
- January alone saw 100+ booking requests. To meet demand without delays, we expanded our team with more professional photographers, ensuring every client gets prompt service.                 
+                    In 2025, our photography team completed over 10,000 shoots.
+                    Our data shows clients trust us to present their properties
+                    at the highest standard, attracting serious buyers
+                    efficiently.
                   </p>
-                 
-                 <a class="btn btn-warning btn-md" href="#">Book a Shoot</a>
+
+                  <div class="header-action-button">
+                    <a class="btn btn-warning btn-md" href="#">Book a Shoot</a>
+                  </div>
                 </div>
 
                 <div class="item">
                   <p>
-                     Our clients consistently praise our attention to detail. By combining creativity and expertise, we deliver stunning visuals that highlight the unique value of every property we shoot.
+                    January alone saw 100+ booking requests. To meet demand
+                    without delays, we expanded our team with more professional
+                    photographers, ensuring every client gets prompt service.
                   </p>
-                 
-                 <a class="btn btn-warning btn-md" href="#">Book a Shoot</a>
+
+                  <a class="btn btn-warning btn-md" href="#">Book a Shoot</a>
                 </div>
-               
+
+                <div class="item">
+                  <p>
+                    Our clients consistently praise our attention to detail. By
+                    combining creativity and expertise, we deliver stunning
+                    visuals that highlight the unique value of every property we
+                    shoot.
+                  </p>
+
+                  <a class="btn btn-warning btn-md" href="#">Book a Shoot</a>
+                </div>
               </div>
               <!-- .carousel-inner -->
             </div>
@@ -664,10 +724,13 @@
     <!-- #testimonial -->
     <!-- end:testimonial -->
 
-
-
     <!-- begin:footer -->
-    <footer id="colophon" class="site-footer bg-black" role="contentinfo" data-aos="fade-up">
+    <footer
+      id="colophon"
+      class="site-footer bg-black"
+      role="contentinfo"
+      data-aos="fade-up"
+    >
       <div class="container">
         <div class="row">
           <div class="col-md-3 col-sm-6">
@@ -678,7 +741,9 @@
                 class="img-responsive marg-20-btm marg-20-top"
               />
               <p>
-                Professional real estate photos that help listings attract more attention and sell faster. We are a team of local real estate photographers dedicated to showcasing properties at their best.
+                Professional real estate photos that help listings attract more
+                attention and sell faster. We are a team of local real estate
+                photographers dedicated to showcasing properties at their best.
               </p>
             </section>
             <!-- .widget -->
@@ -733,7 +798,7 @@
 
     <!-- begin:copyright -->
     <section id="copyright" class="copyright bg-black">
-      <div class="container" >
+      <div class="container">
         <div class="row">
           <div class="col-sm-6 copy-left">
             <p>
@@ -774,167 +839,177 @@
       <!-- .container -->
     </section>
     <!-- #copyright -->
-  
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="assets/plugins/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/plugins/parallax.min.js"></script>
-<script src="assets/js/navigation.js"></script>
-<script src="assets/plugins/jquery.easing.js"></script>
-<script src="assets/plugins/jquery.magnific-popup.min.js"></script>
-<script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
-<script src="assets/plugins/isotope.pkgd.min.js"></script>
-<script src="assets/plugins/owl.carousel.min.js"></script>
-<script src="assets/js/script.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="assets/plugins/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/plugins/parallax.min.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/plugins/jquery.easing.js"></script>
+    <script src="assets/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/plugins/isotope.pkgd.min.js"></script>
+    <script src="assets/plugins/owl.carousel.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
 
- 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
- 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
- 
-<!-- Add this script right after your existing AOS.init() script -->
-<script>
-// Fetch hero data from API
-fetch('https://salianvisuals.ejazquran.space/api/v1/hero')
-  .then(response => response.json())
-  .then(data => {
-    if (data.success && data.data) {
-      const hero = data.data;
-      
-      // Update title
-      const titleElement = document.querySelector('.brannedName');
-      if (titleElement) titleElement.textContent = hero.title;
-      
-      // Update subtitle (the text after <br>)
-      const captionTitle = document.querySelector('.caption-title');
-      if (captionTitle) {
-        const br = captionTitle.querySelector('br');
+    <!-- Add this script right after your existing AOS.init() script -->
+    <script>
+      // Fetch hero data from API
+      fetch("https://salianvisuals.ejazquran.space/api/v1/hero")
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success && data.data) {
+            const hero = data.data;
+
+            // Update title
+            const titleElement = document.querySelector(".brannedName");
+            if (titleElement) titleElement.textContent = hero.title;
+
+            // Update subtitle (the text after <br>)
+            const captionTitle = document.querySelector(".caption-title");
+            if (captionTitle) {
+              const br = captionTitle.querySelector("br");
+              if (br && br.nextSibling) {
+                br.nextSibling.textContent = hero.subtitle;
+              }
+            }
+
+            // Update description
+            const descElement = document.querySelector(".header-caption p");
+            if (descElement) descElement.textContent = hero.description;
+
+            // Set background image inline on bgImage div
+            const bgImageElement = document.querySelector(".bgImage");
+            if (bgImageElement && hero.image_url) {
+              bgImageElement.style.backgroundImage = `linear-gradient(to right, #0f172ac8, rgba(255, 255, 255, 0)), url('${hero.image_url}')`;
+              bgImageElement.style.backgroundSize = "cover";
+              bgImageElement.style.backgroundPosition = "center";
+              bgImageElement.style.backgroundRepeat = "no-repeat";
+            }
+
+            // Remove the data-parallax from header to prevent conflicts
+            const headerElement = document.querySelector(".header");
+            if (headerElement) {
+              headerElement.removeAttribute("data-parallax");
+              headerElement.removeAttribute("data-image-src");
+            }
+          }
+        })
+        .catch((error) => console.error("Error fetching hero data:", error));
+    </script>
+
+    <script>
+      AOS.init({
+        duration: 900,
+        once: true,
+        offset: 200,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof gsap === "undefined") return;
+
+        const siteHeader = document.querySelector(".site-header");
+        const brandName = document.querySelector(".brannedName");
+        const captionTitle = document.querySelector(".caption-title");
+        const paragraph = document.querySelector(".header-caption p");
+        const buttons = document.querySelectorAll(".header-action-button .btn");
+
+        if (!brandName) return;
+
+        const br = captionTitle.querySelector("br");
+        let secondLineText = "";
+
         if (br && br.nextSibling) {
-          br.nextSibling.textContent = hero.subtitle;
+          secondLineText = br.nextSibling.textContent;
+          if (br.nextSibling.nodeType === 3) {
+            br.nextSibling.remove();
+          }
         }
-      }
-      
-      // Update description
-      const descElement = document.querySelector('.header-caption p');
-      if (descElement) descElement.textContent = hero.description;
-      
-      // Set background image inline on bgImage div
-      const bgImageElement = document.querySelector('.bgImage');
-      if (bgImageElement && hero.image_url) {
-        bgImageElement.style.backgroundImage = `linear-gradient(to right, #0f172ac8, rgba(255, 255, 255, 0)), url('${hero.image_url}')`;
-        bgImageElement.style.backgroundSize = 'cover';
-        bgImageElement.style.backgroundPosition = 'center';
-        bgImageElement.style.backgroundRepeat = 'no-repeat';
-      }
-      
-      // Remove the data-parallax from header to prevent conflicts
-      const headerElement = document.querySelector('.header');
-      if (headerElement) {
-        headerElement.removeAttribute('data-parallax');
-        headerElement.removeAttribute('data-image-src');
-      }
-    }
-  })
-  .catch(error => console.error('Error fetching hero data:', error));
-</script>
 
-<script>
-AOS.init({
-  duration: 900,
-  once: true,
-  offset: 200
-});
+        // Initial states
+        gsap.set([siteHeader, brandName, paragraph, buttons], { opacity: 0 });
 
-document.addEventListener('DOMContentLoaded', function() {
+        gsap.set(siteHeader, { y: -30, filter: "blur(5px)" });
+        gsap.set(brandName, { y: 50, filter: "blur(6px)" });
+        gsap.set(paragraph, { y: 35, filter: "blur(6px)" });
+        gsap.set(buttons, { y: 25 });
 
-  if (typeof gsap === 'undefined') return;
+        if (secondLineText) {
+          const secondLineElement = document.createElement("span");
+          secondLineElement.className = "second-line-luxury";
+          secondLineElement.textContent = secondLineText;
+          secondLineElement.style.display = "inline-block";
+          secondLineElement.style.opacity = "0";
+          secondLineElement.style.transform = "translateY(40px)";
+          secondLineElement.style.filter = "blur(6px)";
+          if (br) br.insertAdjacentElement("afterend", secondLineElement);
+        }
 
-  const siteHeader = document.querySelector('.site-header');
-  const brandName = document.querySelector('.brannedName');
-  const captionTitle = document.querySelector('.caption-title');
-  const paragraph = document.querySelector('.header-caption p');
-  const buttons = document.querySelectorAll('.header-action-button .btn');
+        const tl = gsap.timeline({
+          defaults: { ease: "power3.out" },
+        });
 
-  if (!brandName) return;
+        tl.to(siteHeader, {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 1.6,
+        })
 
-  const br = captionTitle.querySelector('br');
-  let secondLineText = '';
+          .to(
+            brandName,
+            {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              duration: 1.8,
+            },
+            "+=0.2",
+          )
 
-  if (br && br.nextSibling) {
-    secondLineText = br.nextSibling.textContent;
-    if (br.nextSibling.nodeType === 3) {
-      br.nextSibling.remove();
-    }
-  }
+          .to(
+            ".second-line-luxury",
+            {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              duration: 1.6,
+            },
+            "+=0.2",
+          )
 
-  // Initial states
-  gsap.set([siteHeader, brandName, paragraph, buttons], { opacity: 0 });
+          .to(
+            paragraph,
+            {
+              opacity: 1,
+              y: 0,
+              filter: "blur(0px)",
+              duration: 1.4,
+            },
+            "+=0.25",
+          )
 
-  gsap.set(siteHeader, { y: -30, filter: 'blur(5px)' });
-  gsap.set(brandName, { y: 50, filter: 'blur(6px)' });
-  gsap.set(paragraph, { y: 35, filter: 'blur(6px)' });
-  gsap.set(buttons, { y: 25 });
+          .to(
+            buttons,
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.9,
+              stagger: 0.2,
+              ease: "power2.out",
+            },
+            "+=0.3",
+          );
 
-  if (secondLineText) {
-    const secondLineElement = document.createElement('span');
-    secondLineElement.className = 'second-line-luxury';
-    secondLineElement.textContent = secondLineText;
-    secondLineElement.style.display = 'inline-block';
-    secondLineElement.style.opacity = '0';
-    secondLineElement.style.transform = 'translateY(40px)';
-    secondLineElement.style.filter = 'blur(6px)';
-    if (br) br.insertAdjacentElement('afterend', secondLineElement);
-  }
-
-  const tl = gsap.timeline({
-    defaults: { ease: "power3.out" }
-  });
-
-  tl.to(siteHeader, {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      duration: 1.6
-    })
-
-    .to(brandName, {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      duration: 1.8
-    }, "+=0.2")
-
-    .to('.second-line-luxury', {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      duration: 1.6
-    }, "+=0.2")
-
-    .to(paragraph, {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      duration: 1.4
-    }, "+=0.25")
-
-    .to(buttons, {
-      opacity: 1,
-      y: 0,
-      duration: 0.9,
-      stagger: 0.2,
-      ease: "power2.out"
-    }, "+=0.3");
-
-
-  // Softer glow
-  const style = document.createElement('style');
-  style.textContent = `
+        // Softer glow
+        const style = document.createElement("style");
+        style.textContent = `
     @keyframes luxuryGlowSimple {
       0% { text-shadow: 0 0 12px rgba(255,168,0,0.2); }
       50% { text-shadow: 0 0 28px rgba(255,168,0,0.6); }
@@ -944,23 +1019,18 @@ document.addEventListener('DOMContentLoaded', function() {
       animation: luxuryGlowSimple 3.5s ease-in-out infinite !important;
     }
   `;
-  document.head.appendChild(style);
+        document.head.appendChild(style);
+      });
+    </script>
 
-});
-</script>
-
- 
-
-<style>
- 
-  
-  /* Only hero elements get animated */
-  .brannedName,
-  .second-line-luxury,
-  .header-caption p,
-  .header-action-button .btn {
-    will-change: transform, opacity, filter;
-  }
-</style>
-</body>
+    <style>
+      /* Only hero elements get animated */
+      .brannedName,
+      .second-line-luxury,
+      .header-caption p,
+      .header-action-button .btn {
+        will-change: transform, opacity, filter;
+      }
+    </style>
+  </body>
 </html>
