@@ -1,546 +1,823 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Luxury real estate photography booking. Schedule your shoot with Solian Visuals.">
-    <meta name="keywords" content="luxury real estate photography booking, schedule photos, appointment">
-    <meta name="author" content="Solian Visuals">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Luxury real estate photography booking. Schedule your shoot with Solian Visuals."
+    />
+    <meta
+      name="keywords"
+      content="luxury real estate photography booking, schedule photos, appointment"
+    />
+    <meta name="author" content="Solian Visuals" />
     <title>Booking | Solian Visuals</title>
 
     <!-- Bootstrap -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:300,400,500,600" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/Pe-icon-7-stroke.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-<link rel="icon" href="./assets/img/favico.png" type="image/png">
-    
-    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:300,400,500,600"
+      rel="stylesheet"
+    />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/Pe-icon-7-stroke.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link rel="icon" href="./assets/img/favico.png" type="image/png" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css" />
+
+    <!-- Flatpickr for date picker (lightweight, modern) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <style>
-        /* additional styling for flatpickr inline */
-     
-   
-        .calendar-header {
-            text-align: center;
-            margin-bottom: 30px;
+      /* additional styling */
+      .calendar-header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .calendar-header h3 {
+        font-size: 32px;
+        font-weight: 400;
+        color: #1e2a2e;
+        margin-bottom: 10px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .calendar-header p {
+        color: #8c7b6b;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .calendar-header hr.luxury {
+        width: 80px;
+        height: 2px;
+        background: #c7a254;
+        border: none;
+        margin: 20px auto;
+      }
+
+      /* Booking form luxury styling */
+      .booking-form-luxury {
+        background: #fff;
+        border-radius: 30px;
+        padding: 40px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f0e8dd;
+      }
+
+      .booking-form-luxury .form-control {
+        border: 1px solid #e7daca;
+        border-radius: 16px;
+        padding: 12px 20px;
+        height: auto;
+        font-size: 15px;
+        background: #fbf8f2;
+        transition: all 0.3s;
+      }
+
+      .booking-form-luxury .form-control:focus {
+        border-color: #c7a254;
+        box-shadow: 0 0 0 3px rgba(199, 162, 84, 0.1);
+        background: #fff;
+      }
+
+      .booking-form-luxury label {
+        color: #1e2a2e;
+        font-weight: 500;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+
+      .booking-form-luxury .lead {
+        font-size: 2.3rem;
+        font-weight: 300;
+        color: #c7a254;
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Checkbox styling */
+      .booking-form-luxury .checkbox {
+        margin: 8px 0;
+      }
+
+      .booking-form-luxury .checkbox label {
+        font-weight: 400;
+        color: #4a3f37;
+      }
+
+      .booking-form-luxury .checkbox input[type="checkbox"] {
+        margin-right: 8px;
+      }
+
+      /* Add-ons container */
+      .addons-container {
+        background: #fbf8f2;
+        border-radius: 16px;
+        padding: 20px;
+        margin-top: 5px;
+        border: 1px solid #e7daca;
+      }
+
+      /* Button styling */
+      .booking-form-luxury .button.btn-square {
+        background: #c7a254;
+        color: #fff;
+        border: none;
+        padding: 16px 50px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 40px;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        box-shadow: 0 10px 20px rgba(199, 162, 84, 0.2);
+      }
+
+      .booking-form-luxury .button.btn-square:hover {
+        background: #b38d3c;
+        transform: translateY(-2px);
+        box-shadow: 0 15px 25px rgba(199, 162, 84, 0.3);
+      }
+
+      .booking-form-luxury .button.btn-square:active {
+        transform: translateY(0);
+      }
+
+      .booking-form-luxury .button.btn-square:disabled {
+        background: #bdb29e;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+
+      /* Date picker styling */
+      .date-picker-wrapper {
+        margin-bottom: 25px;
+      }
+      .date-picker-wrapper label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #1e2a2e;
+      }
+      .luxury-date-input {
+        width: 100%;
+        border: 1px solid #e7daca;
+        border-radius: 16px;
+        padding: 12px 20px;
+        background: #fbf8f2;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .luxury-date-input:focus {
+        border-color: #c7a254;
+        box-shadow: 0 0 0 3px rgba(199, 162, 84, 0.1);
+        background: #fff;
+        outline: none;
+      }
+      .selected-date-badge {
+        background: #f5efe7;
+        border-radius: 40px;
+        padding: 8px 18px;
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 14px;
+        color: #c7a254;
+        font-weight: 500;
+      }
+
+      /* Responsive fixes */
+      @media (max-width: 768px) {
+        .booking-form-luxury {
+          padding: 25px;
         }
 
         .calendar-header h3 {
-            font-size: 32px;
-            font-weight: 400;
-            color: #1e2a2e;
-            margin-bottom: 10px;
-            font-family: 'Poppins', sans-serif;
+          font-size: 26px;
+        }
+      }
+
+      /* Footer fixes */
+      .site-footer ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .site-footer ul li a {
+        color: #aaa;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .site-footer ul li a:hover {
+        color: #c7a254;
+      }
+
+      .social-icon {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: right;
+      }
+
+      .social-icon li {
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      .social-icon li a {
+        color: #fff;
+        font-size: 18px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+      }
+
+      .social-icon li a:hover {
+        opacity: 1;
+        color: #c7a254;
+      }
+
+      @media (max-width: 767px) {
+        .copy-left,
+        .copy-right {
+          text-align: center !important;
         }
 
-        .calendar-header p {
-            color: #8c7b6b;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .calendar-header hr.luxury {
-            width: 80px;
-            height: 2px;
-            background: #c7a254;
-            border: none;
-            margin: 20px auto;
-        }
-
-        /* Booking form luxury styling */
-        .booking-form-luxury {
-            background: #fff;
-            border-radius: 30px;
-            padding: 40px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f0e8dd;
-        }
-
-        .booking-form-luxury .form-control {
-            border: 1px solid #e7daca;
-            border-radius: 16px;
-            padding: 12px 20px;
-            height: auto;
-            font-size: 15px;
-            background: #fbf8f2;
-            transition: all 0.3s;
-        }
-
-        .booking-form-luxury .form-control:focus {
-            border-color: #c7a254;
-            box-shadow: 0 0 0 3px rgba(199, 162, 84, 0.1);
-            background: #fff;
-        }
-
-        .booking-form-luxury label {
-            color: #1e2a2e;
-            font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
-
-        .booking-form-luxury .lead {
-            font-size: 2.3rem;
-            font-weight: 300;
-            color: #c7a254;
-            text-align: center;
-            margin-bottom: 30px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Checkbox styling */
-        .booking-form-luxury .checkbox {
-            margin: 8px 0;
-        }
-
-        .booking-form-luxury .checkbox label {
-            font-weight: 400;
-            color: #4a3f37;
-        }
-
-        .booking-form-luxury .checkbox input[type="checkbox"] {
-            margin-right: 8px;
-        }
-
-        /* Add-ons container */
-        .addons-container {
-            background: #fbf8f2;
-            border-radius: 16px;
-            padding: 20px;
-            margin-top: 5px;
-            border: 1px solid #e7daca;
-        }
-
-        /* Button styling */
-        .booking-form-luxury .button.btn-square {
-            background: #c7a254;
-            color: #fff;
-            border: none;
-            padding: 16px 50px;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            border-radius: 40px;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            box-shadow: 0 10px 20px rgba(199, 162, 84, 0.2);
-        }
-
-        .booking-form-luxury .button.btn-square:hover {
-            background: #b38d3c;
-            transform: translateY(-2px);
-            box-shadow: 0 15px 25px rgba(199, 162, 84, 0.3);
-        }
-
-        .booking-form-luxury .button.btn-square:active {
-            transform: translateY(0);
-        }
-
-        /* Responsive fixes */
-        @media (max-width: 768px) {
-            .booking-form-luxury {
-                padding: 25px;
-            }
-            
-            .calendar-container {
-                padding: 20px;
-            }
-            
-            .calendar-header h3 {
-                font-size: 26px;
-            }
-        }
-
-        /* Fix for footer links */
-        .site-footer ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .site-footer ul li a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .site-footer ul li a:hover {
-            color: #c7a254;
-        }
-
-        /* Social icons styling */
         .social-icon {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: right;
+          text-align: center;
+          margin-top: 15px;
         }
-        
+
         .social-icon li {
-            display: inline-block;
-            margin-left: 10px;
+          margin: 0 8px;
         }
-        
-        .social-icon li a {
-            color: #fff;
-            font-size: 18px;
-            opacity: 0.7;
-            transition: opacity 0.3s;
-        }
-        
-        .social-icon li a:hover {
-            opacity: 1;
-            color: #c7a254;
-        }
+      }
 
-        /* Responsive footer */
-        @media (max-width: 767px) {
-            .copy-left, .copy-right {
-                text-align: center !important;
-            }
-            
-            .social-icon {
-                text-align: center;
-                margin-top: 15px;
-            }
-            
-            .social-icon li {
-                margin: 0 8px;
-            }
+      /* Loading spinner */
+      .spinner-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+      }
+      .spinner {
+        width: 60px;
+        height: 60px;
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        border-top: 5px solid #c7a254;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body id="home">
+  <body id="home">
+    <!-- Loading spinner -->
+    <div id="loadingSpinner" class="spinner-overlay">
+      <div class="spinner"></div>
+    </div>
 
-    <!-- header (same structure, updated active) -->
+    <!-- header -->
     <div class="header header-page">
-        <div class="site-header-affix-wrapper">
-            <header id="masthead" class="site-header header-dark" role="banner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="site-branding">
-                                <h1 class="site-title title-image"><a href="index.html" rel="home">
-                                        <img src="assets/img/logo-full-white.png" alt="Solian Visuals"
-                                            class="img-responsive">
-                                    </a></h1>
-                            </div>
-                        </div>
-                        <div class="col-sm-9">
-                            <nav id="site-navigation" class="main-navigation" role="navigation">
-                                <button class="menu-toggle" type="button" aria-controls="primary-menu"
-                                    aria-expanded="false">
-                                    <span class="pe-7s-menu"></span><span class="sr-only">Menu</span>
-                                </button>
-                                <div class="menu-testing-menu-container">
-                                    <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
-                                        <li class="menu-item"><a href="/">Home</a></li>
-                                        <li class="menu-item"><a href="service.html">Services</a></li>
-                                        <li class="menu-item"><a href="pricing.html">Pricing</a></li>
-                                        <li class="menu-item"><a href="Portfolio.html">Portfolio</a></li>
-                                        <li class="menu-item"><a href="about.html">About</a></li>
-                                        <li class="menu-item"><a href="contact.html">Contact</a></li>
-   <li class="menu-item sign-up-btn">
-                          <a href="https://salianvisuals.ejazquran.space/login"
-                            >Sign Up</a
-                          >
-                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
+      <div class="site-header-affix-wrapper">
+        <header id="masthead" class="site-header header-dark" role="banner">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="site-branding">
+                  <h1 class="site-title title-image">
+                    <a href="index.html" rel="home">
+                      <img
+                        src="assets/img/logo-full-white.png"
+                        alt="Solian Visuals"
+                        class="img-responsive"
+                      />
+                    </a>
+                  </h1>
                 </div>
-            </header>
-        </div>
+              </div>
+              <div class="col-sm-9">
+                <nav
+                  id="site-navigation"
+                  class="main-navigation"
+                  role="navigation"
+                >
+                  <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-controls="primary-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="pe-7s-menu"></span
+                    ><span class="sr-only">Menu</span>
+                  </button>
+                  <div class="menu-testing-menu-container">
+                    <ul
+                      id="primary-menu"
+                      class="menu nav-menu"
+                      aria-expanded="false"
+                    >
+                      <li class="menu-item"><a href="/">Home</a></li>
+                      <li class="menu-item">
+                        <a href="service.html">Services</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="pricing.html">Pricing</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="Portfolio.html">Portfolio</a>
+                      </li>
+                      <li class="menu-item"><a href="about.html">About</a></li>
+                      <li class="menu-item">
+                        <a href="contact.html">Contact</a>
+                      </li>
+                      <li class="menu-item sign-up-btn">
+                        <a href="https://salianvisuals.ejazquran.space/login"
+                          >Sign Up</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
     </div>
 
     <!-- main-title -->
     <div class="main-title block-section padd-40-top padd-60-btm bg-grey">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <h1 class="main-title-primary">Reserve Your Date</h1>
-                    <h4 class="main-title-secondary">PHOTOGRAPHY SESSION</h4>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1 class="main-title-primary">Reserve Your Date</h1>
+            <h4 class="main-title-secondary">PHOTOGRAPHY SESSION</h4>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- breadcrumb -->
     <div class="breadcrumbs">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Booking</li>
-                    </ol>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li class="active">Booking</li>
+            </ol>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- site-main -->
     <div class="site-main">
-        <!-- additional info strip (refined) -->
-        <div id="additional-info" class="additional-info block-section bg-theme padd-20-top padd-40-btm">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fa fa-phone"></i>
-                            </div><!-- .contact-item-icon -->
-                            <h4 class="contact-item-title">Phone number:</h4>
-                            <div class="contact-item-info"> +1 479-214-5551</div>
-                        </div><!-- .contact-item -->
-                    </div><!-- .col-# -->
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fa fa-envelope-o"></i>
-                            </div><!-- .contact-item-icon -->
-                            <h4 class="contact-item-title">Email address:</h4>
-                            <div class="contact-item-info">info@solianvisualphotography.com</div>
-                        </div><!-- .contact-item -->
-                    </div><!-- .col-# -->
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fa fa-map-marker"></i>
-                            </div><!-- .contact-item-icon -->
-                            <h4 class="contact-item-title">Office address:</h4>
-                            <div class="contact-item-info">Fayetteville, Arkansas</div>
-                        </div><!-- .contact-item -->
-                    </div><!-- .col-# -->
-
-                    <div class="col-md-3 col-sm-6">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">
-                                <i class="fa fa-clock-o"></i>
-                            </div><!-- .contact-item-icon -->
-                            <h4 class="contact-item-title">Opening times:</h4>
-                            <div class="contact-item-info">Mon - Fri: 7.00 - 17:00</div>
-                        </div><!-- .contact-item -->
-                    </div><!-- .col-# -->
+      <!-- additional info strip -->
+      <div
+        id="additional-info"
+        class="additional-info block-section bg-theme padd-20-top padd-40-btm"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fa fa-phone"></i>
                 </div>
+                <h4 class="contact-item-title">Phone number:</h4>
+                <div class="contact-item-info">+1 479-214-5551</div>
+              </div>
             </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fa fa-envelope-o"></i>
+                </div>
+                <h4 class="contact-item-title">Email address:</h4>
+                <div class="contact-item-info">
+                  info@solianvisualphotography.com
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+                <h4 class="contact-item-title">Office address:</h4>
+                <div class="contact-item-info">Fayetteville, Arkansas</div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </div>
+                <h4 class="contact-item-title">Opening times:</h4>
+                <div class="contact-item-info">Mon - Fri: 7.00 - 17:00</div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- BEGIN LUXURY BOOKING SECTION -->
-        <div id="luxury-booking" class="block-section bg-white">
-            <div class="container">
-                <!-- Large elegant calendar section -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="calendar-container">
-                            <div class="calendar-header">
-                                <h3>Select Your Preferred Date</h3>
-                                <p>Fill and submit the form to request an available date</p>
-                                <hr class="luxury">
-                            </div>
-                            <!-- Calendar will be injected here by flatpickr -->
-                            <div id="luxury-calendar" style="max-width: 800px; margin: 0 auto;"></div>
-                        </div>
+      <!-- LUXURY BOOKING SECTION - Removed calendar and time input -->
+      <div id="luxury-booking" class="block-section bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="booking-form-luxury marg-20-top marg-40-btm">
+                <form id="bookingForm">
+                  <p class="lead">Complete your reservation</p>
+
+                  <!-- Date Picker - Simple and elegant -->
+                  <div class="date-picker-wrapper">
+                    <label for="shootDate">Select preferred date *</label>
+                    <input
+                      type="text"
+                      id="shootDate"
+                      class="luxury-date-input"
+                      placeholder="Click to select a date"
+                      readonly
+                      required
+                    />
+                    <div
+                      id="selectedDateDisplay"
+                      class="selected-date-badge"
+                      style="display: none"
+                    ></div>
+                    <input
+                      type="hidden"
+                      id="selectedDate"
+                      name="selectedDate"
+                      value=""
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="fullname">Full name *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullname"
+                      required
+                    />
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          required
+                        />
+                      </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="booking-form-luxury marg-20-top marg-40-btm">
-                            <form class="contact-form" id="bookingForm">
-                                <p class="lead">Complete your reservation</p>
-
-                                <div class="form-group">
-                                    <label for="fullname">Full name *</label>
-                                    <input type="text" class="form-control" id="fullname" required>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="email">Email *</label>
-                                            <input type="email" class="form-control" id="email" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="phone">Phone *</label>
-                                            <input type="tel" class="form-control" id="phone" required>
-                                        </div>
-                                    </div>
-                                </div>
- 
-
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="booking_time">Preferred time *</label>
-                                            <select class="form-control" id="booking_time" required>
-                                                <option value="" disabled selected>Select time</option>
-                                                <option value="8:00 AM">8:00 AM</option>
-                                                <option value="9:00 AM">9:00 AM</option>
-                                                <option value="10:00 AM">10:00 AM</option>
-                                                <option value="11:00 AM">11:00 AM</option>
-                                                <option value="1:00 PM">1:00 PM</option>
-                                                <option value="2:00 PM">2:00 PM</option>
-                                                <option value="3:00 PM">3:00 PM</option>
-                                                <option value="4:00 PM">4:00 PM</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="service">Service *</label>
-                                            <select class="form-control" id="service" required>
-                                                <option value="" disabled selected>Choose package</option>
-                                                <option value="Basic Photo">Basic Photo Package</option>
-                                                <option value="Standard Photo">Standard Photo</option>
-                                                <option value="Premium Marketing">Premium Marketing Package</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label>Add-ons (select any that apply)</label>
-                                    <div class="addons-container">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value="Drone Photos"> Drone Photos <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$60</span></label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value="Drone Video"> Drone Video <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$90</span></label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value="Interior Walkthrough Video"> Interior Walkthrough Video <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$150</span></label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value="Twilight Photos"> Twilight Photos <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$80</span></label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value="Floor Plan"> Floor Plan <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$40</span></label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value="Extra Photos (each)"> Extra Photos (each) <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$5</span></label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value="Large Property"> Large Property <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$40</span></label>
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value="Rush Delivery"> Rush Delivery <span style="color: #c7a254; font-weight: 500; margin-left: 5px;">$40</span></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <small class="form-text text-muted" style="margin-top: 8px; display: block; color: #8c7b6b;">Select any add-ons to enhance your package</small>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="address">Property address *</label>
-                                    <input type="text" class="form-control" id="address" placeholder="Street, city, zip"
-                                        required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="notes">Special requests (optional)</label>
-                                    <textarea class="form-control" rows="4" id="notes"
-                                        placeholder="Tell us anything we should know..."></textarea>
-                                </div>
-
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" required> I agree to the <a href="#" style="color: #c7a254;">terms of service</a>
-                                        and <a href="#" style="color: #c7a254;">cancellation policy</a> *
-                                    </label>
-                                </div>
-
-                                <div style="text-align: center; margin-top: 40px;">
-                                    <button type="submit" class="button btn-square">Confirm Booking</button>
-                                </div>
-                                <p class="text-center small" style="margin-top: 20px; color: #8c7b6b;">We will confirm
-                                    within 2 hours</p>
-                            </form>
-                        </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="phone"
+                          required
+                        />
+                      </div>
                     </div>
-                </div>
-            </div><!-- .container -->
-        </div><!-- #luxury-booking -->
-    </div><!-- .site-main -->
+                  </div>
+
+                  <div class="form-group">
+                    <label for="service">Service *</label>
+                    <select class="form-control" id="service" required>
+                      <option value="" disabled selected>Choose package</option>
+                      <option value="Basic Photo Package">
+                        Basic Photo Package
+                      </option>
+                      <option value="Standard Photo">Standard Photo</option>
+                      <option value="Premium Marketing Package">
+                        Premium Marketing Package
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Add-ons (select any that apply)</label>
+                    <div class="addons-container">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="checkbox">
+                            <label
+                              ><input type="checkbox" value="Drone Photos" />
+                              Drone Photos
+                              <span
+                                style="
+                                  color: #c7a254;
+                                  font-weight: 500;
+                                  margin-left: 5px;
+                                "
+                                >$60</span
+                              ></label
+                            >
+                          </div>
+                          <div class="checkbox">
+                            <label
+                              ><input type="checkbox" value="Drone Video" />
+                              Drone Video
+                              <span
+                                style="
+                                  color: #c7a254;
+                                  font-weight: 500;
+                                  margin-left: 5px;
+                                "
+                                >$90</span
+                              ></label
+                            >
+                          </div>
+                          <div class="checkbox">
+                            <label
+                              ><input
+                                type="checkbox"
+                                value="Interior Walkthrough Video"
+                              />
+                              Interior Walkthrough Video
+                              <span
+                                style="
+                                  color: #c7a254;
+                                  font-weight: 500;
+                                  margin-left: 5px;
+                                "
+                                >$150</span
+                              ></label
+                            >
+                          </div>
+                          <div class="checkbox">
+                            <label
+                              ><input type="checkbox" value="Twilight Photos" />
+                              Twilight Photos
+                              <span
+                                style="
+                                  color: #c7a254;
+                                  font-weight: 500;
+                                  margin-left: 5px;
+                                "
+                                >$80</span
+                              ></label
+                            >
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="checkbox">
+                            <label
+                              ><input type="checkbox" value="Floor Plan" />
+                              Floor Plan
+                              <span
+                                style="
+                                  color: #c7a254;
+                                  font-weight: 500;
+                                  margin-left: 5px;
+                                "
+                                >$40</span
+                              ></label
+                            >
+                          </div>
+                          <div class="checkbox">
+                            <label
+                              ><input
+                                type="checkbox"
+                                value="Extra Photos (each)"
+                              />
+                              Extra Photos (each)
+                              <span
+                                style="
+                                  color: #c7a254;
+                                  font-weight: 500;
+                                  margin-left: 5px;
+                                "
+                                >$5</span
+                              ></label
+                            >
+                          </div>
+                          <div class="checkbox">
+                            <label
+                              ><input type="checkbox" value="Large Property" />
+                              Large Property
+                              <span
+                                style="
+                                  color: #c7a254;
+                                  font-weight: 500;
+                                  margin-left: 5px;
+                                "
+                                >$40</span
+                              ></label
+                            >
+                          </div>
+                          <div class="checkbox">
+                            <label
+                              ><input type="checkbox" value="Rush Delivery" />
+                              Rush Delivery
+                              <span
+                                style="
+                                  color: #c7a254;
+                                  font-weight: 500;
+                                  margin-left: 5px;
+                                "
+                                >$40</span
+                              ></label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <small
+                      class="form-text text-muted"
+                      style="margin-top: 8px; display: block; color: #8c7b6b"
+                      >Select any add-ons to enhance your package</small
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="address">Property address *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      placeholder="Street, city, zip"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="notes">Special requests (optional)</label>
+                    <textarea
+                      class="form-control"
+                      rows="4"
+                      id="notes"
+                      placeholder="Tell us anything we should know..."
+                    ></textarea>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" id="termsCheckbox" required /> I
+                      agree to the
+                      <a href="#" style="color: #c7a254">terms of service</a>
+                      and
+                      <a href="#" style="color: #c7a254">cancellation policy</a>
+                      *
+                    </label>
+                  </div>
+
+                  <div style="text-align: center; margin-top: 40px">
+                    <button
+                      type="submit"
+                      id="submitBtn"
+                      class="button btn-square"
+                    >
+                      Confirm Booking
+                    </button>
+                  </div>
+                  <p
+                    class="text-center small"
+                    style="margin-top: 20px; color: #8c7b6b"
+                  >
+                    We will confirm within 2 hours
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- footer -->
-    <footer id="colophon" class="site-footer bg-black" role="contentinfo" data-aos="fade-up">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <section class="widget">
-                        <img src="assets/img/logo-full-white.png" alt="Solian Visuals"
-                            class="img-responsive marg-20-btm marg-20-top" />
-                        <p>Luxury real estate photography that elevates listings. Based in Fayetteville, AR.</p>
-                    </section>
-                </div>
-                <div class="col-md-2 col-sm-6 col-md-offset-1 col-sm-offset-0">
-                    <section class="widget">
-                        <h3 class="widget-title">Links</h3>
-                        <ul>
-                            <li><a href="about.html">About us</a></li>
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="Portfolio.html">Portfolio</a></li>
-                            <li><a href="booking.html">Booking</a></li>
-                            <li><a href="#">Gallery</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <section class="widget">
-                        <h3 class="widget-title">Our Pricing</h3>
-                        <ul>
-                            <li><a href="pricing.html">Basic Photo Package</a></li>
-                            <li><a href="pricing.html">Standard Photo</a></li>
-                            <li><a href="pricing.html">Premium Marketing</a></li>
-                            <li><a href="pricing.html">Add-ons</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <section class="widget">
-                        <h3 class="widget-title">Contact</h3>
-                        <p>Fayetteville, Arkansas</p>
-                        <p>info@solianvisual.com<br />+1 479-214-5551</p>
-                    </section>
-                </div>
-            </div>
+    <footer
+      id="colophon"
+      class="site-footer bg-black"
+      role="contentinfo"
+      data-aos="fade-up"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <section class="widget">
+              <img
+                src="assets/img/logo-full-white.png"
+                alt="Solian Visuals"
+                class="img-responsive marg-20-btm marg-20-top"
+              />
+              <p>
+                Luxury real estate photography that elevates listings. Based in
+                Fayetteville, AR.
+              </p>
+            </section>
+          </div>
+          <div class="col-md-2 col-sm-6 col-md-offset-1 col-sm-offset-0">
+            <section class="widget">
+              <h3 class="widget-title">Links</h3>
+              <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="#">Gallery</a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <section class="widget">
+              <h3 class="widget-title">Our Pricing</h3>
+              <ul>
+                <li><a href="pricing.html">Basic Photo Package</a></li>
+                <li><a href="pricing.html">Standard Photo</a></li>
+                <li><a href="pricing.html">Premium Marketing</a></li>
+                <li><a href="pricing.html">Add-ons</a></li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <section class="widget">
+              <h3 class="widget-title">Contact</h3>
+              <p>Fayetteville, Arkansas</p>
+              <p>info@solianvisual.com<br />+1 479-214-5551</p>
+            </section>
+          </div>
         </div>
+      </div>
     </footer>
 
     <section id="copyright" class="copyright bg-black">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 copy-left">
-                    <p><a target="_blank" href="https://zahinsoft.com" style="color: #c7a254;">Dev: Zahinsoft</a>. All rights reserved.</p>
-                </div>
-                <div class="col-sm-6 copy-right">
-                    <ul class="social-icon">
-                        <li><a href="#" class="icon-twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="icon-facebook"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a href="#" class="icon-youtube"><i class="fa fa-youtube"></i></a></li>
-                        <li><a href="#" class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 copy-left">
+            <p>
+              <a
+                target="_blank"
+                href="https://zahinsoft.com"
+                style="color: #c7a254"
+                >Dev: Zahinsoft</a
+              >. All rights reserved.
+            </p>
+          </div>
+          <div class="col-sm-6 copy-right">
+            <ul class="social-icon">
+              <li>
+                <a href="#" class="icon-twitter"
+                  ><i class="fa fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="icon-facebook"
+                  ><i class="fa fa-facebook-square"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="icon-youtube"
+                  ><i class="fa fa-youtube"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="icon-instagram"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- scripts -->
@@ -553,8 +830,133 @@
     <script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
     <script src="assets/plugins/isotope.pkgd.min.js"></script>
     <script src="assets/plugins/owl.carousel.min.js"></script>
-   
-  
-</body>
 
+    <script>
+      $(document).ready(function () {
+        let selectedShootDate = "";
+
+        // Initialize flatpickr date picker (simple, elegant, no time)
+        const datePicker = flatpickr("#shootDate", {
+          dateFormat: "Y-m-d",
+          minDate: "today",
+          allowInput: false,
+          placeholder: "Select a date",
+          onChange: function (selectedDates, dateStr, instance) {
+            if (selectedDates.length > 0) {
+              selectedShootDate = dateStr;
+              $("#selectedDate").val(dateStr);
+              $("#selectedDateDisplay")
+                .text("Selected: " + dateStr)
+                .css("display", "inline-block");
+              $("#shootDate").css("border-color", "#c7a254");
+            } else {
+              selectedShootDate = "";
+              $("#selectedDate").val("");
+              $("#selectedDateDisplay").hide();
+              $("#shootDate").css("border-color", "#e7daca");
+            }
+          },
+        });
+
+        // Form submit handler
+        $("#bookingForm").on("submit", function (e) {
+          e.preventDefault();
+
+          // Validate selected date
+          if (!selectedShootDate) {
+            alert("Please select a preferred date for your shoot.");
+            return;
+          }
+
+          // Gather form data
+          const fullname = $("#fullname").val().trim();
+          const email = $("#email").val().trim();
+          const phone = $("#phone").val().trim();
+          const address = $("#address").val().trim();
+          const service = $("#service").val();
+          const specialRequests = $("#notes").val().trim() || "";
+          const termsAccepted = $("#termsCheckbox").is(":checked");
+
+          // Basic validation
+          if (!fullname || !email || !phone || !address || !service) {
+            alert("Please fill in all required fields (*).");
+            return;
+          }
+          if (!termsAccepted) {
+            alert(
+              "You must agree to the terms of service and cancellation policy.",
+            );
+            return;
+          }
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+          }
+
+          // Phone validation (basic)
+          if (phone.length < 6) {
+            alert("Please enter a valid phone number.");
+            return;
+          }
+
+          // Build addons array from checkboxes inside .addons-container
+          let addonsArray = [];
+          $(".addons-container input[type='checkbox']:checked").each(
+            function () {
+              let val = $(this).val();
+              if (val && val.trim() !== "") {
+                addonsArray.push(val.trim());
+              }
+            },
+          );
+
+          // Prepare payload exactly as per API sample structure
+          const payload = {
+            name: fullname,
+            email: email,
+            phone: phone,
+            property_address: address,
+            preferred_time: selectedShootDate, // YYYY-MM-DD format
+            service: service,
+            addons: addonsArray,
+            special_requests: specialRequests,
+          };
+
+          // Show loading spinner and disable button
+          $("#loadingSpinner").css("display", "flex");
+          $("#submitBtn").prop("disabled", true).text("Submitting...");
+
+          // Send API request
+          $.ajax({
+            url: "https://salianvisuals.ejazquran.space/api/v1/book-shoot",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(payload),
+            success: function (response) {
+              // On success: redirect to successBooking.html
+              window.location.href = "successBooking.html";
+            },
+            error: function (xhr, status, error) {
+              console.error("API Error:", error, xhr.responseText);
+              // On failure: redirect to failedBooking.html
+              window.location.href = "failedBooking.html";
+            },
+            complete: function () {
+              // Spinner will be hidden after redirect
+              $("#loadingSpinner").hide();
+              $("#submitBtn").prop("disabled", false).text("Confirm Booking");
+            },
+          });
+        });
+
+        // Optional: style the date picker input on click
+        $("#shootDate").on("click", function () {
+          datePicker.open();
+        });
+      });
+    </script>
+  </body>
 </html>
