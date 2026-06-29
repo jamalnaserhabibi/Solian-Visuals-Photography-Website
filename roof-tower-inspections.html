@@ -1,38 +1,35 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solian Visuals – Portfolio | Real Estate Photography</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solian Visuals Photography Drone</title>
 
-    <!-- Bootstrap & core styles (kept as original structure) -->
+    <!-- Bootstrap & core styles (already in your file) -->
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:300,500"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:300,400,500,600"
       rel="stylesheet"
     />
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/css/Pe-icon-7-stroke.css" rel="stylesheet" />
-    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
-    <link href="assets/css/owl.theme.css" rel="stylesheet" />
-    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
-    <!-- Main style (your existing style.min.css) + AOS + custom overrides -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.min.css" />
-    <!-- AOS CSS (added via CDN) -->
+    <!-- AOS & base style.min (your existing file + the extra CSS we provide) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="assets/css/style.min.css" rel="stylesheet" />
     <link rel="icon" href="./assets/img/favico.png" type="image/png" />
   </head>
-  <body id="home">
-    <!-- header (unchanged except logo and active page) -->
+  <body>
+    <!-- Header (same as yours) -->
     <div class="header header-page">
       <div class="site-header-affix-wrapper">
-        <header id="masthead" class="site-header header-dark" role="banner">
+        <header id="masthead" class="site-header header-dark">
           <div class="container">
             <div class="row">
               <div class="col-sm-3">
                 <div class="site-branding">
                   <h1 class="site-title title-image">
-                    <a href="index.html" rel="home"
+                    <a href="index.html"
                       ><img
                         src="assets/img/logo-full-white.png"
                         alt="Solian Visuals"
@@ -56,6 +53,7 @@
                     <span class="pe-7s-menu"></span
                     ><span class="sr-only">Humberger</span>
                   </button>
+                  <!-- current-menu-item must change in every page -->
                   <div class="menu-testing-menu-container">
                     <ul
                       id="primary-menu"
@@ -63,17 +61,16 @@
                       aria-expanded="false"
                     >
                       <li class="menu-item"><a href="/">Home</a></li>
-                      <li class="menu-item">
+                      <li class="menu-item current-menu-item">
                         <a href="drone.html">Drone Services</a>
                       </li>
-
                       <li class="menu-item">
                         <a href="service.html">Services</a>
                       </li>
                       <li class="menu-item">
                         <a href="pricing.html">Pricing</a>
                       </li>
-                      <li class="menu-item current-menu-item">
+                      <li class="menu-item">
                         <a href="portfolio.html">Portfolio</a>
                       </li>
                       <li class="menu-item"><a href="about.html">About</a></li>
@@ -95,68 +92,140 @@
       </div>
     </div>
 
-    <!-- main-title (adjusted text) -->
-    <div class="main-title block-section padd-40-top padd-60-btm bg-grey">
+    <div
+      class="main-title block-section padd-40-top padd-60-btm bg-grey"
+      id="mainTitle"
+    >
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <h1 class="main-title-primary">Marketing Gallery</h1>
-            <h4 class="main-title-secondary">
-              curated collection of featured properties
+            <h1 class="main-title-primary" id="titleLine1">
+              Roof / Tower Inspections
+            </h1>
+            <h4 class="main-title-secondary" id="titleLine2">
+              What do we serve with Drones?
             </h4>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- breadcrumb (simplified) -->
-    <div class="breadcrumbs">
+    <!-- breadcrumbs (AOS) -->
+    <div class="breadcrumbs" data-aos="fade" data-aos-delay="100">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <ol class="breadcrumb">
               <li><a href="#">Home</a></li>
-              <li class="active">Portfolio / Marketing Gallery</li>
+              <li class="active">Drone Services</li>
+              /
+              <li class="active">Roof / Tower Inspections</li>
             </ol>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- site-main : portfolio grid (public marketing gallery, 3 properties) -->
-    <div class="site-main">
-      <div class="content-section">
-        <div class="container">
-          <div class="row">
-            <!-- sidebar completely hidden via css, we use full col -->
-            <div class="col-md-12">
-              <div class="entry-content">
-                <div class="portfolio-grid-3" id="portfolioGrid">
-                  <!-- Dynamic content will be appended here -->
-                </div>
-              </div>
-              <!-- entry-content -->
-            </div>
-            <!-- col-md-12 -->
-          </div>
-          <!-- row -->
+    <!-- ===== DESCRIPTION SECTION ===== -->
+    <section class="padd-60-top padd-60-btm">
+      <div class="container">
+        <div class="section-title">
+          <h2>Service Overview</h2>
         </div>
-        <!-- container -->
-      </div>
-      <!-- content-section -->
-    </div>
-    <!-- site-main -->
 
-    <!-- footer (unchanged from original except minor text) -->
-    <footer
-      id="colophon"
-      class="site-footer bg-black"
-      role="contentinfo"
-      data-aos="fade-up"
-    >
+        <div class="content-box">
+          <p>
+            Our drone inspection service provides highly detailed aerial
+            analysis for residential, commercial, and industrial properties.
+            Using advanced drone technology, we capture high-resolution images
+            and videos that help identify structural issues, maintenance needs,
+            and site conditions without the need for risky manual inspections.
+          </p>
+
+          <p>
+            This service is ideal for real estate developers, construction
+            companies, insurance claims, roofing assessments, and infrastructure
+            monitoring. We ensure safe, fast, and cost-effective inspection
+            results with professional reporting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY SECTION ===== -->
+    <section class="padd-60-btm">
+      <div class="container">
+        <div class="section-title">
+          <h4>Project Gallery</h4>
+          <!-- <p>Update images easily by replacing file names</p> -->
+        </div>
+
+        <div class="row gallery">
+          <div class="col-md-4 col-sm-6">
+            <img src="assets/img/drone1.jpg" alt="Drone Inspection 1" />
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <img src="assets/img/drone1.jpg" alt="Drone Inspection 2" />
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <img src="assets/img/drone1.jpg" alt="Drone Inspection 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIDEO SECTION ===== -->
+    <!-- <section class="padd-60-btm">
+      <div class="container">
+        <div class="section-title">
+          <h2>Inspection Video</h2>
+        </div>
+
+        <div class="video-box">
+          <iframe src="https://www.youtube...." frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ===== EDITABLE CONTENT SECTION ===== -->
+    <section class="padd-60-btm">
+      <div class="container">
+        <div class="section-title">
+          <h2>Additional Information</h2>
+        </div>
+
+        <div class="content-box">
+          <h4>What we can do here:</h4>
+          <ul>
+            <li>Pricing details</li>
+            <li>Package options</li>
+            <li>Technical specifications</li>
+            <li>Case studies or client notes</li>
+          </ul>
+
+          <hr />
+
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos eius a
+            eaque veniam quidem doloribus aliquid, facere ducimus similique
+            culpa commodi voluptatum laboriosam, ratione rerum. Sapiente eveniet
+            totam quo velit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer (AOS) -->
+    <footer id="colophon" class="site-footer bg-black" role="contentinfo">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6">
+          <div
+            class="col-md-3 col-sm-6"
+            data-aos="fade-up"
+            data-aos-duration="600"
+          >
             <section class="widget">
               <img
                 src="assets/img/logo-full-white.png"
@@ -165,11 +234,17 @@
               />
               <p>
                 Professional real estate photos that help listings attract more
-                attention and sell faster.
+                attention and sell faster. We are a team of local real estate
+                photographers dedicated to showcasing properties at their best.
               </p>
             </section>
           </div>
-          <div class="col-md-2 col-sm-6 col-md-offset-1 col-sm-offset-0">
+          <div
+            class="col-md-2 col-sm-6 col-md-offset-1"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="600"
+          >
             <section class="widget">
               <h3 class="widget-title">Links</h3>
               <ul>
@@ -177,11 +252,16 @@
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Booking</a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Gallary</a></li>
               </ul>
             </section>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div
+            class="col-md-3 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="150"
+            data-aos-duration="600"
+          >
             <section class="widget">
               <h3 class="widget-title">Our Pricing</h3>
               <ul>
@@ -189,13 +269,19 @@
                 <li><a href="#">Standard Photo</a></li>
                 <li><a href="#">Premium Marketing Package</a></li>
                 <li><a href="#">ADD-ONS</a></li>
+                <li><a href="#">General Contracting</a></li>
               </ul>
             </section>
           </div>
-          <div class="col-md-3 col-sm-6">
+          <div
+            class="col-md-3 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="600"
+          >
             <section class="widget">
               <h3 class="widget-title">Our Contact</h3>
-              <p>Fayetteville, Arkansas, United States.</p>
+              <p>Fayetteville, Arkansas, California, United States.</p>
               <p>contact@solianvisualphotography.com<br />+1 479-214-5551</p>
             </section>
           </div>
@@ -203,7 +289,7 @@
       </div>
     </footer>
 
-    <!-- copyright -->
+    <!-- copyright (AOS) -->
     <section id="copyright" class="copyright bg-black">
       <div class="container">
         <div class="row">
@@ -213,7 +299,7 @@
               >. All Right Reserved.
             </p>
           </div>
-          <div class="col-sm-6 copy-right">
+          <div class="col-sm-6 copy-right" data-aos="fade-up">
             <ul class="social-icon">
               <li>
                 <a href="#" target="_blank" class="icon-twitter"
@@ -241,7 +327,7 @@
       </div>
     </section>
 
-    <!-- scripts (same as original + AOS) -->
+    <!-- Scripts -->
     <script src="assets/plugins/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/plugins/parallax.min.js"></script>
@@ -252,123 +338,34 @@
     <script src="assets/plugins/isotope.pkgd.min.js"></script>
     <script src="assets/plugins/owl.carousel.min.js"></script>
     <script src="assets/js/script.min.js"></script>
-    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script>
-      (function ($) {
-        $(document).ready(function () {
-          // AOS initialization
-          AOS.init({
-            duration: 800,
-            once: true,
-            offset: 40,
-          });
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+        easing: "ease-out-cubic",
+      });
 
-          // Initialize magnific popup for each property gallery
-          $(".popup-gallery").each(function () {
-            $(this).magnificPopup({
-              delegate: "a",
-              type: "image",
-              gallery: {
-                enabled: true,
-              },
-              removalDelay: 300,
-              mainClass: "mfp-fade",
-            });
-          });
-
-          // Alternative: Direct click on thumbnails to open their gallery
-          $(".property-thumb").on("click", function () {
-            var galleryId = $(this).data("gallery");
-            $("#" + galleryId + " a:first")
-              .magnificPopup({
-                items: $("#" + galleryId + " a")
-                  .map(function () {
-                    return {
-                      src: $(this).attr("href"),
-                      title: $(this).attr("title"),
-                    };
-                  })
-                  .get(),
-                gallery: {
-                  enabled: true,
-                },
-                type: "image",
-                removalDelay: 300,
-                mainClass: "mfp-fade",
-              })
-              .magnificPopup("open");
-          });
-        });
-      })(jQuery);
-
-      $(document).ready(function () {
-        const apiUrl =
-          "https://salianvsuals.zahinsoft.info/api/v1/view_galleries";
-
-        $.getJSON(apiUrl, function (response) {
-          if (response.status && response.data.length) {
-            let delay = 0;
-            response.data.forEach((gallery) => {
-              const galleryHtml = `
-            <div class="property-card" data-aos="fade-up" data-aos-delay="${delay}">
-              <div class="property-thumb">
-                <img src="${gallery.cover_image}" alt="${gallery.title}" class="img-responsive"/>
-              </div>
-              <div class="property-info">
-                <h3 class="property-title">${gallery.title}</h3>
-                <div class="property-location"><i class="fa fa-map-marker"></i> ${gallery.property_address}</div>
-                <a href="propertyGallary.html?id=${gallery.id}" class="see-more-link">
-                  See property gallery <i class="fa fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          `;
-              $("#portfolioGrid").append(galleryHtml);
-              delay += 100;
-            });
-            // Refresh AOS after appending
-            AOS.refresh();
-          }
-        });
+      window.addEventListener("load", function () {
+        var title1 = document.getElementById("titleLine1");
+        var title2 = document.getElementById("titleLine2");
+        var mainBlock = document.getElementById("mainTitle");
+        if (title1 && title2) {
+          gsap.set([title1, title2], { opacity: 0, y: 30 });
+          gsap
+            .timeline({ defaults: { ease: "power3.out" } })
+            .to(title1, { opacity: 1, y: 0, duration: 0.9 })
+            .to(title2, { opacity: 1, y: 0, duration: 0.8 }, "-=0.4")
+            .fromTo(
+              mainBlock,
+              { backgroundColor: "#f7f5f2" },
+              { backgroundColor: "#ffffff", duration: 1.2 },
+              0,
+            );
+        }
       });
     </script>
-    <!-- ensure that the property thumb triggers the popup (we used custom trigger above) -->
-    <style>
-      /* additional minimal style for popup */
-      .white-popup {
-        max-width: 900px;
-        margin: 20px auto;
-        background: white;
-        padding: 20px;
-        text-align: center;
-        position: relative;
-      }
-      .mfp-fade.mfp-bg {
-        opacity: 0;
-        transition: all 0.3s ease-out;
-      }
-      .mfp-fade.mfp-bg.mfp-ready {
-        opacity: 0.8;
-      }
-      .mfp-fade.mfp-bg.mfp-removing {
-        opacity: 0;
-      }
-      .mfp-fade.mfp-wrap .mfp-content {
-        opacity: 0;
-        transition: all 0.3s ease-out;
-      }
-      .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-        opacity: 1;
-      }
-      .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-        opacity: 0;
-      }
-      /* no download button anywhere */
-      .mfp-download {
-        display: none !important;
-      }
-    </style>
   </body>
 </html>
